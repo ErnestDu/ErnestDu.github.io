@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SIP环境搭建</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ernest Du">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Ernest's Blog</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about/index.html">关于</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">分类</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">存档</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">标签</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>SIP环境搭建 </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>24 March 2013</span>
+    </div>
+    <div class="content">
+      <p>最近在实验室做的东西和SIP有关，所以要搭建SIP的环境。</p>
+
+<h3 id="">服务器</h3>
+
+<p>使用 asterisk，linux 常见发行版估计都有吧，安装好以后主要配置 <code>/etc/asterisk/sip.conf</code> 文件：</p>
+<div class='highlight'><pre><code class='bash'><span class='o'>[</span>general<span class='o'>]</span>
+<span class='nv'>context</span><span class='o'>=</span><span class='nb'>test</span>
+<span class='nv'>udpbindaddr</span><span class='o'>=</span>0.0.0.0:5060
+<span class='nv'>tcpbindaddr</span><span class='o'>=</span>0.0.0.0:5060
+<span class='nv'>transport</span><span class='o'>=</span>udp
+<span class='nv'>srvlookup</span><span class='o'>=</span>yes
+
+<span class='o'>[</span>1001<span class='o'>]</span>
+<span class='nb'>type</span><span class='o'>=</span>friend
+<span class='nv'>secret</span><span class='o'>=</span><span class='nb'>test</span>
+<span class='nv'>host</span><span class='o'>=</span>dynamic
+
+<span class='o'>[</span>1002<span class='o'>]</span>
+<span class='nb'>type</span><span class='o'>=</span>friend
+<span class='nv'>secret</span><span class='o'>=</span><span class='nb'>test</span>
+<span class='nv'>host</span><span class='o'>=</span>dynamic
+</code></pre></div>
+<p>[general] 里面是基本的配置，SIP服务器监听IP和端口什么的。</p>
+
+<p>后面的[1001]和[1002]是设置了两个SIP用户，用户名分别是1001和1002，密码都是test，friend则可以拨打和接听电话。比如要拨打1002要拨打1001就只需要呼叫<code>1001@siphostname:port</code>这个SIP URL就可以了，其中siphostname是动态的，根据SIP服务器所在的主机变化，port是默认的5060。如果要想更简单直接呼叫1001，可以把1001和1002加入到同一个分区，编辑<code>/etc/asterisk/extensions.conf</code>，在最后面添加:</p>
+<div class='highlight'><pre><code class='bash'><span class='o'>[</span><span class='nb'>test</span><span class='o'>]</span>
+<span class='nv'>exten</span> <span class='o'>=</span>&gt; 1001,1,Dial<span class='o'>(</span>SIP/1001<span class='o'>)</span>
+<span class='nv'>exten</span> <span class='o'>=</span>&gt; 1002,1,Dial<span class='o'>(</span>SIP/1002<span class='o'>)</span>
+</code></pre></div>
+<p>这样就把1001和1002两个用户添加到了test这个分区。</p>
+
+<p>启动SIP服务器，/etc/init.d/asterisk start，如果想看服务器端的输出，可以使用 /usr/sbin/asterisk -vvvvvvcg，增加v就是增加回显信息。</p>
+
+<h3 id="_2">客户端</h3>
+
+<p>客户端的软件也比较多，比如Ekiga、linphone这些都是开源的SIP客户端，在Windows和Linux下面都能使用。使用都比较简单，不多说了。我们在Android手机上也可以打开SIP电话的功能，打开拨号——设置——互联网通话设置——账户——添加账户，然后就可以添加SIP的账户，保存以后记得勾选接听来电，这样才能接听别人的呼叫。</p>
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#linux-ref">
+    		linux <span>3</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#sip-ref">sip <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#linux-ref">linux <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#ekiga-ref">ekiga <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#linephone-ref">linephone <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/beijing-marathon-2012" title="2012北京马拉松小记">&larr; Previous</a></li>
+      
+      
+        <li class="next"><a href="/welcome-to-jekyll" title="Welcome to Jekyll!">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'ernestdu'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2014 Ernest Du
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

@@ -4,7 +4,7 @@
  <title>Ernest's Blog</title>
  <link href="http://username.github.io/" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2014-03-09T15:26:12+08:00</updated>
+ <updated>2014-03-11T22:36:57+08:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Ernest Du</name>
@@ -35,6 +35,143 @@
 &lt;span class=&#39;c1&#39;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>SIP环境搭建</title>
+   <link href="http://username.github.io/sip-setup"/>
+   <updated>2013-03-24T00:00:00+08:00</updated>
+   <id>http://username.github.io/sip-setup</id>
+   <content type="html">&lt;p&gt;最近在实验室做的东西和SIP有关，所以要搭建SIP的环境。&lt;/p&gt;
+
+&lt;h3 id=&quot;&quot;&gt;服务器&lt;/h3&gt;
+
+&lt;p&gt;使用 asterisk，linux 常见发行版估计都有吧，安装好以后主要配置 &lt;code&gt;/etc/asterisk/sip.conf&lt;/code&gt; 文件：&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;o&#39;&gt;[&lt;/span&gt;general&lt;span class=&#39;o&#39;&gt;]&lt;/span&gt;
+&lt;span class=&#39;nv&#39;&gt;context&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;test&lt;/span&gt;
+&lt;span class=&#39;nv&#39;&gt;udpbindaddr&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;0.0.0.0:5060
+&lt;span class=&#39;nv&#39;&gt;tcpbindaddr&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;0.0.0.0:5060
+&lt;span class=&#39;nv&#39;&gt;transport&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;udp
+&lt;span class=&#39;nv&#39;&gt;srvlookup&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;yes
+
+&lt;span class=&#39;o&#39;&gt;[&lt;/span&gt;1001&lt;span class=&#39;o&#39;&gt;]&lt;/span&gt;
+&lt;span class=&#39;nb&#39;&gt;type&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;friend
+&lt;span class=&#39;nv&#39;&gt;secret&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;test&lt;/span&gt;
+&lt;span class=&#39;nv&#39;&gt;host&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;dynamic
+
+&lt;span class=&#39;o&#39;&gt;[&lt;/span&gt;1002&lt;span class=&#39;o&#39;&gt;]&lt;/span&gt;
+&lt;span class=&#39;nb&#39;&gt;type&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;friend
+&lt;span class=&#39;nv&#39;&gt;secret&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;test&lt;/span&gt;
+&lt;span class=&#39;nv&#39;&gt;host&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;dynamic
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;[general] 里面是基本的配置，SIP服务器监听IP和端口什么的。&lt;/p&gt;
+
+&lt;p&gt;后面的[1001]和[1002]是设置了两个SIP用户，用户名分别是1001和1002，密码都是test，friend则可以拨打和接听电话。比如要拨打1002要拨打1001就只需要呼叫&lt;code&gt;1001@siphostname:port&lt;/code&gt;这个SIP URL就可以了，其中siphostname是动态的，根据SIP服务器所在的主机变化，port是默认的5060。如果要想更简单直接呼叫1001，可以把1001和1002加入到同一个分区，编辑&lt;code&gt;/etc/asterisk/extensions.conf&lt;/code&gt;，在最后面添加:&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;o&#39;&gt;[&lt;/span&gt;&lt;span class=&#39;nb&#39;&gt;test&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;]&lt;/span&gt;
+&lt;span class=&#39;nv&#39;&gt;exten&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&amp;gt; 1001,1,Dial&lt;span class=&#39;o&#39;&gt;(&lt;/span&gt;SIP/1001&lt;span class=&#39;o&#39;&gt;)&lt;/span&gt;
+&lt;span class=&#39;nv&#39;&gt;exten&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&amp;gt; 1002,1,Dial&lt;span class=&#39;o&#39;&gt;(&lt;/span&gt;SIP/1002&lt;span class=&#39;o&#39;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这样就把1001和1002两个用户添加到了test这个分区。&lt;/p&gt;
+
+&lt;p&gt;启动SIP服务器，/etc/init.d/asterisk start，如果想看服务器端的输出，可以使用 /usr/sbin/asterisk -vvvvvvcg，增加v就是增加回显信息。&lt;/p&gt;
+
+&lt;h3 id=&quot;_2&quot;&gt;客户端&lt;/h3&gt;
+
+&lt;p&gt;客户端的软件也比较多，比如Ekiga、linphone这些都是开源的SIP客户端，在Windows和Linux下面都能使用。使用都比较简单，不多说了。我们在Android手机上也可以打开SIP电话的功能，打开拨号——设置——互联网通话设置——账户——添加账户，然后就可以添加SIP的账户，保存以后记得勾选接听来电，这样才能接听别人的呼叫。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>2012北京马拉松小记</title>
+   <link href="http://username.github.io/beijing-marathon-2012"/>
+   <updated>2012-11-30T00:00:00+08:00</updated>
+   <id>http://username.github.io/beijing-marathon-2012</id>
+   <content type="html">&lt;p&gt;好久不写blog了，前几天去跑了北京马拉松还是来总结一下。&lt;/p&gt;
+
+&lt;p&gt;去年第一次就跑完了全程，所以今年也一直想着要继续参加全程马拉松，但是报名却一直没有开始（感谢18大），最后时间定在11月25号，已经是寒冷的冬天了，犹豫了下，不过还是报了名。&lt;/p&gt;
+
+&lt;p&gt;因为报名后离开赛时间短，完全没有训练。而且在上个月一次出去和同学吃饭喝酒不小心把左脚踝扭伤了（我真的没醉，就是平常走路。。。），伤得比较重，至少以前我没有遇到过这么重的伤，当然马拉松之前倒是差不多恢复了。&lt;/p&gt;
+
+&lt;p&gt;早上去是先公交到西直门然后挤地铁到前门，结果在万恶西直门没挤上地铁，又等了下一趟车。到了前门已经8点了，前门参加马拉松的人又特别多，好不容易找到同学，把比赛的衣服给他。然后是戴号码牌，计时芯片，各种准备工作。&lt;/p&gt;
+
+&lt;p&gt;这时差不多都快开始了，但是我们在哪里起跑呢，全程在很远的地方，我们只能混在迷你马拉松的队伍里了。到处都是人，根本跑不开，只能缓缓前进，真正走到全程的起跑点时已经晚了6分钟了。不过马拉松也就无所谓起跑了。跑过天安门差不多开始真正跑起来，因为没有热身，所以开始跑得很慢，跑过西单，然后复兴门，接着转弯，迷你马拉松的同学们就跑完了。我们继续往前面跑，之前很冷的感觉没有了，速度也还比较稳定，不快不慢，这样下去肯定是没问题的。跑了10多公里后，感觉很饿，就想喝加得乐，吃东西，不过要每隔5公里才有啊，只能继续跑。后面开始有风了，而且速度变慢以后身体又开始感觉冷了，越来越不想跑，而且空气也不好，同学也跑不动了。而且比较失误的是我们基本是匀速跑，虽然总的时间我们估计能跑完，但是在半程的关门时间却不是3小时，而是要提前一点，跑在后面都没有水和饮料了，而且道路也解除封闭了，我们还要在路上等红绿灯。越想越觉得跑下去没意思了，于是干脆不跑了吧，就直接跑完半程就坐地铁去奥体中心了。&lt;/p&gt;
+
+&lt;p&gt;不过今年能跑一半我觉得还是基本满足了，还是下一年继续吧，如果天气能好点，争取再跑完一次全程。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>考研小结</title>
+   <link href="http://username.github.io/exam"/>
+   <updated>2012-01-09T00:00:00+08:00</updated>
+   <id>http://username.github.io/exam</id>
+   <content type="html">&lt;p&gt;今天终于考完了，感觉一般吧，数学比预计差些，专业课差很多，英语政治貌似要好点，总体来说自己的水平就这样，发挥也还算正常，不要求更高的表现了。其他无所谓了，考挂了又不用补考，怕毛啊。&lt;/p&gt;
+
+&lt;p&gt;至少最近终于可以稍微放松点了，考完期末考试就能够回家了&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Google Public DNS IPv6 addresses</title>
+   <link href="http://username.github.io/google-public-dns"/>
+   <updated>2011-10-09T00:00:00+08:00</updated>
+   <id>http://username.github.io/google-public-dns</id>
+   <content type="html">&lt;p&gt;也不知道什么时候有的，今天才发现。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/speed/public-dns/docs/using&quot;&gt;Google Public DNS IPv6 addresses:&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;2001:4860:4860::8888
+
+2001:4860:4860::8844
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这ip还算好记，不过暂时不会像ordns.he.net(2001:470:20::2)那样返回Google相关域名的ipv6地址。&lt;/p&gt;
+
+&lt;p&gt;另外今天才知道为什么在不同的地点ping 8.8.8.8, 2001:470:20::2或者2001:4860:4860::8888这些ip都很快的原因，因为它们使用了anycast任播技术，实际的服务器是分布在很多不同地理位置的，比如全球13个根域名服务器”a~m.root-servers.net”，其中部分并不只有单一个服务器，是以任播技术在全球多个地点设立镜像站。好嘛，我觉得需要去补计算机网络知识了。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Openbox配置记录</title>
+   <link href="http://username.github.io/openbox-configuration"/>
+   <updated>2011-07-12T00:00:00+08:00</updated>
+   <id>http://username.github.io/openbox-configuration</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>不输入密码登录ssh</title>
+   <link href="http://username.github.io/ssh-without-password"/>
+   <updated>2011-05-26T00:00:00+08:00</updated>
+   <id>http://username.github.io/ssh-without-password</id>
+   <content type="html">&lt;p&gt;使用ssh每次都要输入登录密码，感觉太麻烦，还是有办法不输入密码的。有两个办法，一种ssh是可以使用 authentication key登录的，另一种就是用expect自动输入密码。&lt;/p&gt;
+
+&lt;h2 id=&quot;1_ssh&quot;&gt;1. 用ssh密钥的办法：&lt;/h2&gt;
+
+&lt;h3 id=&quot;a_&quot;&gt;a. 本地生成密钥&lt;/h3&gt;
+
+&lt;p&gt;ssh-keygen -t rsa&lt;/p&gt;
+
+&lt;p&gt;这会在~/.ssh/ 目录下生成id_rsa和id_rsa.pub两个文件，除了rsa以外还可以选择dsa，ecdsa这样的密钥，不过我没有试过了。&lt;/p&gt;
+
+&lt;h3 id=&quot;b_id_rsapubsshhost&quot;&gt;b. 将生成的id_rsa.pub传到sshhost上面&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;ssh-copy-id -i username@sshhost&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;会提示输入密码，然后就会在sshhost的~/.ssh/目录下面生成authorized_keys这个文件，一切就ok了，以后登录就不用输入密码了。&lt;/p&gt;
+
+&lt;h2 id=&quot;2_expect&quot;&gt;2. 用expect自动输入密码&lt;/h2&gt;
+
+&lt;p&gt;如果没有权限使用ssh密钥的话可以用expect来自动输入密码，expect是Unix下面一个强大的进行自动化控制和测试的工具，@auxoro同学提供了个简单的脚本:&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;c&#39;&gt;#!/usr/bin/expect&lt;/span&gt;
+
+spawn ssh username@hostname
+
+expect &lt;span class=&#39;s2&#39;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;
+
+send &lt;span class=&#39;s2&#39;&gt;&amp;quot;yourpassword\r&amp;quot;&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+
+expect eof
+
+&lt;span class=&#39;nb&#39;&gt;exit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;其中username, hostname, yourpassword改成对应的用户名、主机名和密码，执行这个脚本就可以登录了，比较适合用ssh代理的情况。&lt;/p&gt;
+
+&lt;p&gt;以上两种方法相对于自己手动输入密码还是有点不安全的，第一种要是有人能够使用你的电脑就可以登录你的远程主机，第二种方法更是直接可以在脚本里面看到你的password了，所以要安全的话就还是不要怕麻烦再输入一遍密码好了。&lt;/p&gt;</content>
  </entry>
  
  

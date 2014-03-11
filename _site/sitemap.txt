@@ -1,12 +1,18 @@
 
+http://username.github.io/about/index.html
 http://username.github.io/atom.xml
 http://username.github.io/categories.html
 http://username.github.io/index.html
 http://username.github.io/archive.html
 http://username.github.io/sitemap.txt
-http://username.github.io/about.html
 http://username.github.io/tags.html
 http://username.github.io/rss.xml
 
 http://username.github.io/test-page
 http://username.github.io/welcome-to-jekyll
+http://username.github.io/sip-setup
+http://username.github.io/beijing-marathon-2012
+http://username.github.io/exam
+http://username.github.io/google-public-dns
+http://username.github.io/openbox-configuration
+http://username.github.io/ssh-without-password
