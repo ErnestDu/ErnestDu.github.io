@@ -2,8 +2,8 @@
 layout: post
 title: "2012北京马拉松小记"
 description: ""
-category: Life
-tags: [马拉松, 北京, 跑步]
+category: life
+tags: [beijing, marathon, running]
 ---
 {% include JB/setup %}
 

@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>不输入密码登录ssh</title>
-    
+    <title>用命令行下载迅雷离线</title>
+    <meta name="description" content="">
     <meta name="author" content="Ernest Du">
 
     <!-- Enable responsive viewport -->
@@ -106,49 +106,20 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>不输入密码登录ssh </h1>
+  <h1>用命令行下载迅雷离线 </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>26 May 2011</span>
+      <span>19 April 2011</span>
     </div>
     <div class="content">
-      <p>使用ssh每次都要输入登录密码，感觉太麻烦，还是有办法不输入密码的。有两个办法，一种ssh是可以使用 authentication key登录的，另一种就是用expect自动输入密码。</p>
+      <p>搞了个迅雷会员，离线下载和高速通道用起来还是很实用的。不过迅雷显然只能在Windows下面用了，在虚拟机里面还是感觉很卡。另外虽然用浏览器打开 <a href="http://lixian.xunlei.com">http://lixian.vip.xunlei.com</a> 也可以下载，不过由于在教育网速度很慢，只能挂代理了。教育网ipv6代理速度快的时候能达到2~3M/s，但是最近总是不太稳定，导致浏览器下载经常出问题，常常没下载完就显示完成了，如果用Firefox的Downthemall来下载更是无语，下载一大半然后又自动重下。</p>
 
-<h2 id="1_ssh">1. 用ssh密钥的办法：</h2>
+<p>于是我想着能不能先把迅雷离线服务器上的东西下载到vps上，然后在从vps下载到自己电脑上。试了下还是可以实现的，关键是要把浏览器的cookie导出来，然后wget或aria2使用这个cookie来连接服务器就可以登录了。</p>
 
-<h3 id="a_">a. 本地生成密钥</h3>
-
-<p>ssh-keygen -t rsa</p>
-
-<p>这会在~/.ssh/ 目录下生成id_rsa和id_rsa.pub两个文件，除了rsa以外还可以选择dsa，ecdsa这样的密钥，不过我没有试过了。</p>
-
-<h3 id="b_id_rsapubsshhost">b. 将生成的id_rsa.pub传到sshhost上面</h3>
-
-<p><code>ssh-copy-id -i username@sshhost</code></p>
-
-<p>会提示输入密码，然后就会在sshhost的~/.ssh/目录下面生成authorized_keys这个文件，一切就ok了，以后登录就不用输入密码了。</p>
-
-<h2 id="2_expect">2. 用expect自动输入密码</h2>
-
-<p>如果没有权限使用ssh密钥的话可以用expect来自动输入密码，expect是Unix下面一个强大的进行自动化控制和测试的工具，@auxoro同学提供了个简单的脚本:</p>
-<div class='highlight'><pre><code class='bash'><span class='c'>#!/usr/bin/expect</span>
-
-spawn ssh username@hostname
-
-expect <span class='s2'>&quot;password&quot;</span>
-
-send <span class='s2'>&quot;yourpassword\r&quot;</span><span class='p'>;</span>
-
-expect eof
-
-<span class='nb'>exit</span>
-</code></pre></div>
-<p>其中username, hostname, yourpassword改成对应的用户名、主机名和密码，执行这个脚本就可以登录了，比较适合用ssh代理的情况。</p>
-
-<p>以上两种方法相对于自己手动输入密码还是有点不安全的，第一种要是有人能够使用你的电脑就可以登录你的远程主机，第二种方法更是直接可以在脚本里面看到你的password了，所以要安全的话就还是不要怕麻烦再输入一遍密码好了。</p>
+<p>Firefox的cookie可以用Export Cookies导出（Chrome暂时没有找到什么方法导出cookie），然后将cookies.txt上传到vps; 迅雷离线服务器下载好了以后，选择资源复制下载链接; 然后<code>wget –load-cookies=cookiefile &#39;url&#39; -o outputfilename</code> 就可以了。如果觉得wget不够快，可以换用aria2多线程下载，加上参数-s，<code>aria2c –load-cookies=cookiefile -s 5 &#39;url&#39; -o outputfilename</code>，就是将文件分成5份来下载。等到vps下载好了之后就可以用sftp，ftp，http等方法把文件下载到自己的电脑了。</p>
     </div>
 
   
@@ -179,13 +150,11 @@ expect eof
 
   
      
-    	<li><a href="/tags.html#ssh-ref">ssh <span>1</span></a></li>
+    	<li><a href="/tags.html#network-ref">network <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#xunlei-ref">xunlei <span>1</span></a></li>
      
     	<li><a href="/tags.html#linux-ref">linux <span>8</span></a></li>
-     
-    	<li><a href="/tags.html#putty-ref">putty <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#password-ref">password <span>1</span></a></li>
     
   
 
@@ -198,10 +167,10 @@ expect eof
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/gnome3" title="Gnome 3使用感受">&larr; Previous</a></li>
+        <li class="prev"><a href="/ubuntu-revese-proxy" title="ubuntu ppa反向代理">&larr; Previous</a></li>
       
       
-        <li class="next"><a href="/windows8" title="在Virtualbox里面体验Windows 8">Next &rarr;</a></li>
+        <li class="next"><a href="/gnome3" title="Gnome 3使用感受">Next &rarr;</a></li>
       
       </ul>
     </div>

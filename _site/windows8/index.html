@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>不输入密码登录ssh</title>
-    
+    <title>在Virtualbox里面体验Windows 8</title>
+    <meta name="description" content="">
     <meta name="author" content="Ernest Du">
 
     <!-- Enable responsive viewport -->
@@ -106,49 +106,38 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>不输入密码登录ssh </h1>
+  <h1>在Virtualbox里面体验Windows 8 </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>26 May 2011</span>
+      <span>04 June 2011</span>
     </div>
     <div class="content">
-      <p>使用ssh每次都要输入登录密码，感觉太麻烦，还是有办法不输入密码的。有两个办法，一种ssh是可以使用 authentication key登录的，另一种就是用expect自动输入密码。</p>
+      <p>今天端午假期加某敏感的日子，待在寝室里面闲得无聊。看到远景上有个Windows 8 Pre-M3的下载，就想看看传说中的Win 8是个样子。</p>
 
-<h2 id="1_ssh">1. 用ssh密钥的办法：</h2>
+<p>大概500k/s左右的速度把镜像拖下来了，文件名为6.2.7959.0.110307-1930amd64freServerEnterpriseen-us-GB1SRVXFREREN_DVD.iso，然后没有空的分区，不想直接在电脑上装，于是用Virtualbox就好了，随手截了几个图(点击图片可以看大图)。</p>
 
-<h3 id="a_">a. 本地生成密钥</h3>
+<p>Installing Windows 8</p>
 
-<p>ssh-keygen -t rsa</p>
+<p>安装界面和Win 7是一样的。</p>
 
-<p>这会在~/.ssh/ 目录下生成id_rsa和id_rsa.pub两个文件，除了rsa以外还可以选择dsa，ecdsa这样的密钥，不过我没有试过了。</p>
+<p>Windows 8 Login Screen</p>
 
-<h3 id="b_id_rsapubsshhost">b. 将生成的id_rsa.pub传到sshhost上面</h3>
+<p>首次的登录界面，要求设置密码，还必须有大小写字母和数字，这个界面还写着Windows Server 2008 R2。</p>
 
-<p><code>ssh-copy-id -i username@sshhost</code></p>
+<p>System Infomation</p>
 
-<p>会提示输入密码，然后就会在sshhost的~/.ssh/目录下面生成authorized_keys这个文件，一切就ok了，以后登录就不用输入密码了。</p>
+<p>系统信息也显示的是Windows Server 2008 R2,只有安装的Lisense写着Windows 8。</p>
 
-<h2 id="2_expect">2. 用expect自动输入密码</h2>
+<p>Command Prompt</p>
 
-<p>如果没有权限使用ssh密钥的话可以用expect来自动输入密码，expect是Unix下面一个强大的进行自动化控制和测试的工具，@auxoro同学提供了个简单的脚本:</p>
-<div class='highlight'><pre><code class='bash'><span class='c'>#!/usr/bin/expect</span>
+<p>打开CMD，可以看到Windows的版本号，内核是6.2。</p>
 
-spawn ssh username@hostname
+<p>这次安装第一感觉是Windows 8的UI变化不大，基本和Windows 7和Windows Server 2008 R2是一样的，毕竟现在是早期开发阶段。除了外观的变化外，内核的变化我也就搞不懂了，反正估计变化也不大，或者微软会说一大堆的改进和新功能，但是其实对于桌面用户来说应该还是没有什么特别的。</p>
 
-expect <span class='s2'>&quot;password&quot;</span>
-
-send <span class='s2'>&quot;yourpassword\r&quot;</span><span class='p'>;</span>
-
-expect eof
-
-<span class='nb'>exit</span>
-</code></pre></div>
-<p>其中username, hostname, yourpassword改成对应的用户名、主机名和密码，执行这个脚本就可以登录了，比较适合用ssh代理的情况。</p>
-
-<p>以上两种方法相对于自己手动输入密码还是有点不安全的，第一种要是有人能够使用你的电脑就可以登录你的远程主机，第二种方法更是直接可以在脚本里面看到你的password了，所以要安全的话就还是不要怕麻烦再输入一遍密码好了。</p>
+<p>本来还打算虚拟机装完后在电脑上直接装的，但是看到这个系统的界面变化不大，还是有点失望了（我本来就是去看UI变化的，抱歉，只有这么肤浅的追求……）。以前Windows 7刚beta的时候也是第一时刻就装了，当时还是很喜欢Windows 7的，遇到同学就推广Windows 7。不过后来就厌倦了，最烦的就是帮别人装系统，特别是Windows 7，本来这个没什么技术含量了。尤其要是个和计算机相关专业的男生还找你装系统的，你就真的只有无语了。看来自己现在对Windows真是没有什么兴趣了，好吧，没什么期待也好，继续专心的用Linux好了。</p>
     </div>
 
   
@@ -179,13 +168,9 @@ expect eof
 
   
      
-    	<li><a href="/tags.html#ssh-ref">ssh <span>1</span></a></li>
+    	<li><a href="/tags.html#virtualbox-ref">virtualbox <span>1</span></a></li>
      
-    	<li><a href="/tags.html#linux-ref">linux <span>8</span></a></li>
-     
-    	<li><a href="/tags.html#putty-ref">putty <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#password-ref">password <span>1</span></a></li>
+    	<li><a href="/tags.html#windows-ref">windows <span>1</span></a></li>
     
   
 
@@ -198,10 +183,10 @@ expect eof
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/gnome3" title="Gnome 3使用感受">&larr; Previous</a></li>
+        <li class="prev"><a href="/ssh-without-password" title="不输入密码登录ssh">&larr; Previous</a></li>
       
       
-        <li class="next"><a href="/windows8" title="在Virtualbox里面体验Windows 8">Next &rarr;</a></li>
+        <li class="next"><a href="/openbox-configuration" title="Openbox配置记录">Next &rarr;</a></li>
       
       </ul>
     </div>

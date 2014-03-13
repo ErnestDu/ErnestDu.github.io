@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>不输入密码登录ssh</title>
-    
+    <title>2011北京马拉松小记</title>
+    <meta name="description" content="">
     <meta name="author" content="Ernest Du">
 
     <!-- Enable responsive viewport -->
@@ -106,49 +106,28 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>不输入密码登录ssh </h1>
+  <h1>2011北京马拉松小记 </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>26 May 2011</span>
+      <span>16 October 2011</span>
     </div>
     <div class="content">
-      <p>使用ssh每次都要输入登录密码，感觉太麻烦，还是有办法不输入密码的。有两个办法，一种ssh是可以使用 authentication key登录的，另一种就是用expect自动输入密码。</p>
+      <p>今天和 @goophile @wxd08 @kwj007 还有飞哥强哥参加了北京马拉松。经过近6小时的长跑，我们成功地完成了全程42.195km的路程。</p>
 
-<h2 id="1_ssh">1. 用ssh密钥的办法：</h2>
+<p>之前也一直没有想到能够跑完全程，我们训练最多也就跑了15km，然后走5km。平时练的最多的就是10公里，一般要1小时几分钟。我们估计的也就是勉强跑完半程，然后再尽量多跑一点。</p>
 
-<h3 id="a_">a. 本地生成密钥</h3>
+<p>今天的天气还不错，虽然跑到后面风有点大。我们出发的时候是在一起的，然后开始的时候人太多就跑散了。只有我和飞哥一起跑，刚开始的10公里比较轻松，不过飞哥说不行，我就抛下他一个人跑了。然后就是我一个人从大概15公里跑到了32公里，中途半程的时候大概用了两个半小时。跑到28公里的时候已经12：30了，不过照这样的速度还是有充足的时间跑完的，我那时候才相信自己可以跑完。后来竟然又碰到 @goophile 了，我们从那之后就一直一起跑，进了奥林匹克森林公园大概36-37公里的时候飞哥又追上我们了，这后面的几公里跑得是相当的艰难，只能跑一下又走一些路。我们一直计算着时间，反正差不多能够在最后关门之前跑完。最后两公里每公里都要10多分钟才能跑完，感觉小腿就要断了，最后幸好在还有几分钟的时候跑到了终点。</p>
 
-<p>ssh-keygen -t rsa</p>
+<p>其实想来我们的准备还是有点不足，本来之前计划的很多训练没有练习，不知道后面的二十公里特别是最后十公里会有这么痛苦。另外我们没有准备充饥的食物，本来我以为自己的脂肪足够了的。跑到知春路的时候大概23公里，饿得不行了，直到到了北航附近在北航的同学那里要到了个蛋糕，后来又到处去要别的东西，清华的同学那里给了巧克力，中科大的同学有香蕉和巧克力。最后十公里倒基本没有吃东西，那时候饿不是最主要的，而是小腿和脚掌特别疼。我以为自己的脚起泡了，结果回到学校一看什么也没有。。</p>
 
-<p>这会在~/.ssh/ 目录下生成id_rsa和id_rsa.pub两个文件，除了rsa以外还可以选择dsa，ecdsa这样的密钥，不过我没有试过了。</p>
+<p>最后在规定时间内完成的人都领到了一块奖牌，一张证书，还有一块布（据说是叫浴巾）。</p>
 
-<h3 id="b_id_rsapubsshhost">b. 将生成的id_rsa.pub传到sshhost上面</h3>
+<p>现在最大的感觉就是小腿痛，不知道明天还能不能走路。。总的来说感觉还是很有意义的，特别感谢在场边热情的市民和志愿者，你们一直在给我们加油；感想提供食物的北航、清华、中科大的同学，不然我估计在半路就饿得昏过去了；感谢Nas、孙燕姿和Dr. Dre，你们的歌陪伴了漫长的六小时；感谢一起参赛的 @goophile @wxd08 @kwj007 飞哥和强哥，我们一起完成一次体能极限的考验。</p>
 
-<p><code>ssh-copy-id -i username@sshhost</code></p>
-
-<p>会提示输入密码，然后就会在sshhost的~/.ssh/目录下面生成authorized_keys这个文件，一切就ok了，以后登录就不用输入密码了。</p>
-
-<h2 id="2_expect">2. 用expect自动输入密码</h2>
-
-<p>如果没有权限使用ssh密钥的话可以用expect来自动输入密码，expect是Unix下面一个强大的进行自动化控制和测试的工具，@auxoro同学提供了个简单的脚本:</p>
-<div class='highlight'><pre><code class='bash'><span class='c'>#!/usr/bin/expect</span>
-
-spawn ssh username@hostname
-
-expect <span class='s2'>&quot;password&quot;</span>
-
-send <span class='s2'>&quot;yourpassword\r&quot;</span><span class='p'>;</span>
-
-expect eof
-
-<span class='nb'>exit</span>
-</code></pre></div>
-<p>其中username, hostname, yourpassword改成对应的用户名、主机名和密码，执行这个脚本就可以登录了，比较适合用ssh代理的情况。</p>
-
-<p>以上两种方法相对于自己手动输入密码还是有点不安全的，第一种要是有人能够使用你的电脑就可以登录你的远程主机，第二种方法更是直接可以在脚本里面看到你的password了，所以要安全的话就还是不要怕麻烦再输入一遍密码好了。</p>
+<p>我觉得该去好好休息了。。</p>
     </div>
 
   
@@ -160,8 +139,8 @@ expect eof
 
   
      
-    	<li><a href="/categories.html#tech-ref">
-    		tech <span>14</span>
+    	<li><a href="/categories.html#life-ref">
+    		life <span>3</span>
     	</a></li>
     
   
@@ -179,13 +158,11 @@ expect eof
 
   
      
-    	<li><a href="/tags.html#ssh-ref">ssh <span>1</span></a></li>
+    	<li><a href="/tags.html#beijing-ref">beijing <span>2</span></a></li>
      
-    	<li><a href="/tags.html#linux-ref">linux <span>8</span></a></li>
+    	<li><a href="/tags.html#marathon-ref">marathon <span>2</span></a></li>
      
-    	<li><a href="/tags.html#putty-ref">putty <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#password-ref">password <span>1</span></a></li>
+    	<li><a href="/tags.html#running-ref">running <span>2</span></a></li>
     
   
 
@@ -198,10 +175,10 @@ expect eof
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/gnome3" title="Gnome 3使用感受">&larr; Previous</a></li>
+        <li class="prev"><a href="/photon-vps" title="VPS更换为PhotonVPS">&larr; Previous</a></li>
       
       
-        <li class="next"><a href="/windows8" title="在Virtualbox里面体验Windows 8">Next &rarr;</a></li>
+        <li class="next"><a href="/sogou-proxy" title="Linux下独立使用搜狗浏览器代理">Next &rarr;</a></li>
       
       </ul>
     </div>

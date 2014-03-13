@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>不输入密码登录ssh</title>
+    <title>ubuntu ppa反向代理</title>
     
     <meta name="author" content="Ernest Du">
 
@@ -106,49 +106,31 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>不输入密码登录ssh </h1>
+  <h1>ubuntu ppa反向代理 </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>26 May 2011</span>
+      <span>03 March 2011</span>
     </div>
     <div class="content">
-      <p>使用ssh每次都要输入登录密码，感觉太麻烦，还是有办法不输入密码的。有两个办法，一种ssh是可以使用 authentication key登录的，另一种就是用expect自动输入密码。</p>
+      <p>用ubuntu的同学都知道ppa源的速度特别慢，于是刚在国外vps上建了反向代理，加速ppa的下载。</p>
 
-<h2 id="1_ssh">1. 用ssh密钥的办法：</h2>
+<p>自己试了下速度很快，截图</p>
 
-<h3 id="a_">a. 本地生成密钥</h3>
+<p><img src="/ubuntu.png" alt="ubuntu" /></p>
 
-<p>ssh-keygen -t rsa</p>
+<p>这是平均速度</p>
 
-<p>这会在~/.ssh/ 目录下生成id_rsa和id_rsa.pub两个文件，除了rsa以外还可以选择dsa，ecdsa这样的密钥，不过我没有试过了。</p>
+<p>要使用的同学请修改/etc/hosts文件，添加:</p>
+<div class='highlight'><pre><code class='bash'>2607:f878:3:2:0:300:2213:10 ppa.launchpad.net
 
-<h3 id="b_id_rsapubsshhost">b. 将生成的id_rsa.pub传到sshhost上面</h3>
+2607:f878:3:2:0:300:2213:10 keyserver.ubuntu.com
 
-<p><code>ssh-copy-id -i username@sshhost</code></p>
-
-<p>会提示输入密码，然后就会在sshhost的~/.ssh/目录下面生成authorized_keys这个文件，一切就ok了，以后登录就不用输入密码了。</p>
-
-<h2 id="2_expect">2. 用expect自动输入密码</h2>
-
-<p>如果没有权限使用ssh密钥的话可以用expect来自动输入密码，expect是Unix下面一个强大的进行自动化控制和测试的工具，@auxoro同学提供了个简单的脚本:</p>
-<div class='highlight'><pre><code class='bash'><span class='c'>#!/usr/bin/expect</span>
-
-spawn ssh username@hostname
-
-expect <span class='s2'>&quot;password&quot;</span>
-
-send <span class='s2'>&quot;yourpassword\r&quot;</span><span class='p'>;</span>
-
-expect eof
-
-<span class='nb'>exit</span>
+2607:f878:3:2:0:300:2213:10 launchpad.net
 </code></pre></div>
-<p>其中username, hostname, yourpassword改成对应的用户名、主机名和密码，执行这个脚本就可以登录了，比较适合用ssh代理的情况。</p>
-
-<p>以上两种方法相对于自己手动输入密码还是有点不安全的，第一种要是有人能够使用你的电脑就可以登录你的远程主机，第二种方法更是直接可以在脚本里面看到你的password了，所以要安全的话就还是不要怕麻烦再输入一遍密码好了。</p>
+<p>暂时只有ipv6可以连接，希望大家能够反馈使用效果。</p>
     </div>
 
   
@@ -179,13 +161,13 @@ expect eof
 
   
      
-    	<li><a href="/tags.html#ssh-ref">ssh <span>1</span></a></li>
-     
     	<li><a href="/tags.html#linux-ref">linux <span>8</span></a></li>
      
-    	<li><a href="/tags.html#putty-ref">putty <span>1</span></a></li>
+    	<li><a href="/tags.html#ubuntu-ref">ubuntu <span>1</span></a></li>
      
-    	<li><a href="/tags.html#password-ref">password <span>1</span></a></li>
+    	<li><a href="/tags.html#ppa-ref">ppa <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#proxy-ref">proxy <span>2</span></a></li>
     
   
 
@@ -198,10 +180,10 @@ expect eof
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/gnome3" title="Gnome 3使用感受">&larr; Previous</a></li>
+        <li class="prev disabled"><a>&larr; Previous</a></li>
       
       
-        <li class="next"><a href="/windows8" title="在Virtualbox里面体验Windows 8">Next &rarr;</a></li>
+        <li class="next"><a href="/commandline-xunlei-offline" title="用命令行下载迅雷离线">Next &rarr;</a></li>
       
       </ul>
     </div>

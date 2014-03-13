@@ -115,7 +115,37 @@
       <span>12 July 2011</span>
     </div>
     <div class="content">
-      
+      <p>Gnome 3从发布以来用了好久，感觉不错，不过现在想换个口味了。但是KDE总感觉慢，而且感觉不怎么好看（我可能审美有问题），大家推荐的Awesome不是很习惯，于是就选了Openbox，搞了一个晚上，记录一下有些配置：</p>
+
+<p>1.安装Openbox很简单</p>
+
+<p><code>pacman -S openbox</code></p>
+
+<p>2.另外还要安装个panel，我选了pypanel，还要obconf和obmenu设置工具：</p>
+
+<p><code>pacman -S pypanel obconf obmenu</code></p>
+
+<p>obconf可以设置主题，我就用clearlooks了，这个才是经典。</p>
+
+<p>obmenu可以图像化地设置Openbox的菜单，不用自己编辑menu.xml文件了。</p>
+
+<p>3.不知道为什么用了SLiM以后输入法fcitx就不能在gtk程序下调出了，把export那些环境变量改到autostart.sh里面也一样，于是还是用startx启动X。Fcitx输入法和pypanel都添加到autostart.sh里面，启动Openbox后就可以启动这些程序。</p>
+
+<p>4.pypanel中文乱码，修改~/.pypanelrc 的字体设置就可以了，我用的是wenquanyi micro hei-8。</p>
+
+<p>5.启动器安装了个kupfer，nautilus用thunar替换掉，gnome-terminal用xfce4-terminal替换掉，其他还有些程序慢慢再来。</p>
+
+<p>6.纠结了很久的USB自动挂载：</p>
+
+<p>首先添加用户到storage组<code>sudo pacman -a ernest storage</code></p>
+
+<p>然后添加hal到启动的daemon里面，在/etc/rc.conf里面</p>
+
+<p>修改~/.xinitrc为<code>exec ck-launch-session openbox-session</code></p>
+
+<p>在thunar的preference里面enable volume management，把mount removable drives when hot-plugged勾上。</p>
+
+<p>之前在Gnome 3下面设置的快捷键还能用，所以配置简单多了。以前也用过Openbox，设置壁纸要装feh，这次也不用，都是Gnome 3的设置，就不管了。大概就这些了。</p>
     </div>
 
   
@@ -127,8 +157,8 @@
 
   
      
-    	<li><a href="/categories.html#linux-ref">
-    		linux <span>3</span>
+    	<li><a href="/categories.html#tech-ref">
+    		tech <span>14</span>
     	</a></li>
     
   
@@ -137,16 +167,36 @@
     </ul>
     
 
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#linux-ref">linux <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#openbox-ref">openbox <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#software-ref">software <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
     
 
     <hr>
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/ssh-without-password" title="不输入密码登录ssh">&larr; Previous</a></li>
+        <li class="prev"><a href="/windows8" title="在Virtualbox里面体验Windows 8">&larr; Previous</a></li>
       
       
-        <li class="next"><a href="/google-public-dns" title="Google Public DNS IPv6 addresses">Next &rarr;</a></li>
+        <li class="next"><a href="/he-tunnelbroker" title="HE Tunnelbroker Server的选择">Next &rarr;</a></li>
       
       </ul>
     </div>

@@ -4,7 +4,7 @@
  <title>Ernest's Blog</title>
  <link href="http://username.github.io/" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2014-03-11T22:36:57+08:00</updated>
+ <updated>2014-03-13T22:52:36+08:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Ernest Du</name>
@@ -99,6 +99,32 @@
  </entry>
  
  <entry>
+   <title>北邮校园网登录脚本（Shell & Greasemonkey）</title>
+   <link href="http://username.github.io/bupt-gateway-auto-login"/>
+   <updated>2012-03-05T00:00:00+08:00</updated>
+   <id>http://username.github.io/bupt-gateway-auto-login</id>
+   <content type="html">&lt;p&gt;学校的网络自从启用登录验证后总有些不方便，虽然有客户端，但是我一直对这类软件比较讨厌。&lt;/p&gt;
+
+&lt;p&gt;不过还是有办法的，查看登录页面的源代码，发现登录的时候把密码是md5加密后和用户名以及其他信息POST到服务器；注销密码没有加密。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ErnestDu/BUPTNet/raw/master/buptgw&quot;&gt;Shell脚本&lt;/a&gt;（点击下载）&lt;/p&gt;
+
+&lt;p&gt;可以方便只用命令行的同学。功能只有登录和注销，-i 登录，-o 注销。使用前请先将yourname和yourpassword改为自己的用户名和密码。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://userscripts.org/scripts/show/127461&quot;&gt;Greasemonkey脚本&lt;/a&gt;（在Userscript的页面请另存为，不要直接安装）&lt;/p&gt;
+
+&lt;p&gt;这个写完结果发现很早之前有人写了 &lt;a href=&quot;http://bbs.byr.cn/#!article/NetResources/81527&quot;&gt;http://bbs.byr.cn/#!article/NetResources/81527&lt;/a&gt; ，估计是学十的学长，但是认证网页改版后好像不能用了。 相比之下我这个更简陋，没办法，不会js，基本就是把登录页面的代码乱改了一下。。。&lt;/p&gt;
+
+&lt;p&gt;Firefox需要安装greasemonkey，Chrome直接就可以用，你们都懂的。&lt;/p&gt;
+
+&lt;p&gt;同样自己手动修改yourname和yourpassword为自己的用户名和密码，然后拖到浏览器里安装。 安装好以后未登录情况下打开浏览器会跳转到校园网网关登录页面，然后自动登录，半秒后跳转到你要访问的网页。&lt;/p&gt;
+
+&lt;p&gt;关于安全问题，用户名密码是本地明文保存的，登录时密码md5加密后截取了一部分POST到服务器，如果要觉得不要安全请慎用。&lt;/p&gt;
+
+&lt;p&gt;话说自从开始认证以后获取的ip都是10开头的了，以前的ip全都没有用了。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>考研小结</title>
    <link href="http://username.github.io/exam"/>
    <updated>2012-01-09T00:00:00+08:00</updated>
@@ -106,6 +132,84 @@
    <content type="html">&lt;p&gt;今天终于考完了，感觉一般吧，数学比预计差些，专业课差很多，英语政治貌似要好点，总体来说自己的水平就这样，发挥也还算正常，不要求更高的表现了。其他无所谓了，考挂了又不用补考，怕毛啊。&lt;/p&gt;
 
 &lt;p&gt;至少最近终于可以稍微放松点了，考完期末考试就能够回家了&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Linux下独立使用搜狗浏览器代理</title>
+   <link href="http://username.github.io/sogou-proxy"/>
+   <updated>2011-11-03T00:00:00+08:00</updated>
+   <id>http://username.github.io/sogou-proxy</id>
+   <content type="html">&lt;p&gt;教育网实在是蛋疼，国外代理经常出问题，而且访问国内网站不够快，于是又想起用搜狗浏览器的代理了。Linux下面用wine安装，启动搜狗浏览器，然后Firefox挂代理上网。&lt;/p&gt;
+
+&lt;p&gt;嫌麻烦了，于是就想办法不启动搜狗浏览器。其实和windows下面单独使用搜狗浏览器代理原理类似，只能用旧的版本了 http://download.ie.sogou.com/sogouexplorer1.1beta.exe ，安装好后运行，启用加速，然后在终端里面执行ps aux |grep sogou ，可以看到这样的结果&lt;/p&gt;
+
+&lt;p&gt;所以我们就照着这个以后运行&lt;code&gt;wine sogouexplorer.exe -proxy at1.dll EDUANDVIDEO D5AA5E6CC265B9CC187E7523AAE5847E&lt;/code&gt; 就可以了。后面的一串字符不这样也可以，但是就照着来吧，注意下sogouexplorer.exe和at1.dll的路径，默认在~/.wine /drive_c/Program\ Files/SogouExplorer 里面，浏览器设置http 127.0.0.1:8081的代理。如果不能启用加速功能，请检查dns设置，要使用教育网的dns才可以。&lt;/p&gt;
+
+&lt;p&gt;另外网上找到的一个用Python写的程序，额，很强大： &lt;a href=&quot;http://xiaoxia.org/2011/03/26/using-python-to-write-a-local-sogou-proxy-server-procedures/&quot;&gt;http://xiaoxia.org/2011/03/26/using-python-to-write-a-local-sogou-proxy-server-procedures/&lt;/a&gt; 这里默认的代理是http 127.0.0.1:1998 ，python的话windows, linux, mac各种平台都能用了。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>2011北京马拉松小记</title>
+   <link href="http://username.github.io/beijing-marathon-2013"/>
+   <updated>2011-10-16T00:00:00+08:00</updated>
+   <id>http://username.github.io/beijing-marathon-2013</id>
+   <content type="html">&lt;p&gt;今天和 @goophile @wxd08 @kwj007 还有飞哥强哥参加了北京马拉松。经过近6小时的长跑，我们成功地完成了全程42.195km的路程。&lt;/p&gt;
+
+&lt;p&gt;之前也一直没有想到能够跑完全程，我们训练最多也就跑了15km，然后走5km。平时练的最多的就是10公里，一般要1小时几分钟。我们估计的也就是勉强跑完半程，然后再尽量多跑一点。&lt;/p&gt;
+
+&lt;p&gt;今天的天气还不错，虽然跑到后面风有点大。我们出发的时候是在一起的，然后开始的时候人太多就跑散了。只有我和飞哥一起跑，刚开始的10公里比较轻松，不过飞哥说不行，我就抛下他一个人跑了。然后就是我一个人从大概15公里跑到了32公里，中途半程的时候大概用了两个半小时。跑到28公里的时候已经12：30了，不过照这样的速度还是有充足的时间跑完的，我那时候才相信自己可以跑完。后来竟然又碰到 @goophile 了，我们从那之后就一直一起跑，进了奥林匹克森林公园大概36-37公里的时候飞哥又追上我们了，这后面的几公里跑得是相当的艰难，只能跑一下又走一些路。我们一直计算着时间，反正差不多能够在最后关门之前跑完。最后两公里每公里都要10多分钟才能跑完，感觉小腿就要断了，最后幸好在还有几分钟的时候跑到了终点。&lt;/p&gt;
+
+&lt;p&gt;其实想来我们的准备还是有点不足，本来之前计划的很多训练没有练习，不知道后面的二十公里特别是最后十公里会有这么痛苦。另外我们没有准备充饥的食物，本来我以为自己的脂肪足够了的。跑到知春路的时候大概23公里，饿得不行了，直到到了北航附近在北航的同学那里要到了个蛋糕，后来又到处去要别的东西，清华的同学那里给了巧克力，中科大的同学有香蕉和巧克力。最后十公里倒基本没有吃东西，那时候饿不是最主要的，而是小腿和脚掌特别疼。我以为自己的脚起泡了，结果回到学校一看什么也没有。。&lt;/p&gt;
+
+&lt;p&gt;最后在规定时间内完成的人都领到了一块奖牌，一张证书，还有一块布（据说是叫浴巾）。&lt;/p&gt;
+
+&lt;p&gt;现在最大的感觉就是小腿痛，不知道明天还能不能走路。。总的来说感觉还是很有意义的，特别感谢在场边热情的市民和志愿者，你们一直在给我们加油；感想提供食物的北航、清华、中科大的同学，不然我估计在半路就饿得昏过去了；感谢Nas、孙燕姿和Dr. Dre，你们的歌陪伴了漫长的六小时；感谢一起参赛的 @goophile @wxd08 @kwj007 飞哥和强哥，我们一起完成一次体能极限的考验。&lt;/p&gt;
+
+&lt;p&gt;我觉得该去好好休息了。。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>VPS更换为PhotonVPS</title>
+   <link href="http://username.github.io/photon-vps"/>
+   <updated>2011-10-09T00:00:00+08:00</updated>
+   <id>http://username.github.io/photon-vps</id>
+   <content type="html">&lt;p&gt;之前的BurstNET ipv6总是连不上，于是只好换了。最后在Rapidxen和PhotonVPS中选择了PhotonVPS 。PhotonVPS 貌似口碑不错，我选择的是Warp .25方案：内存128M，流量300G，一个ipv4 ip，10个ipv6 ip，月费是 $ 5.95 USD，我选了按季度付费，$ 16.07 USD，比BurstNET的价格还便宜一点。&lt;/p&gt;
+
+&lt;p&gt;这个配置没有以前的VPS高，于是另外又买了东哥 @cosbeta 的homezz虚拟主机来放blog。现在用VPS来做blog及其图床的ipv6反向代理，方便教育网用户访问。以前VPS上的Ubuntu PPA ipv6反向代理就只有关闭了，同学们自己另找代理吧。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>让nginx反向代理使用缓存</title>
+   <link href="http://username.github.io/nginx-reverse-proxy-cache"/>
+   <updated>2011-10-09T00:00:00+08:00</updated>
+   <id>http://username.github.io/nginx-reverse-proxy-cache</id>
+   <content type="html">&lt;p&gt;为了不让每次通过ipv6访问blog时都要vps从虚拟主机那边读取数据浪费时间，可以在vps上建立缓存，加快速度。&lt;/p&gt;
+
+&lt;p&gt;直接贴在网上找的代码：&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;proxy_temp_path /home/cache/duxin/proxy_temp_dir 1 2&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+proxy_cache_path /home/cache/duxin/proxy_cache_dir &lt;span class=&#39;nv&#39;&gt;levels&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;1:2 &lt;span class=&#39;nv&#39;&gt;keys_zone&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;duxin:50m &lt;span class=&#39;nv&#39;&gt;inactive&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;1d &lt;span class=&#39;nv&#39;&gt;max_size&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;1g&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+server
+&lt;span class=&#39;o&#39;&gt;{&lt;/span&gt;
+	listen &lt;span class=&#39;o&#39;&gt;[&lt;/span&gt;::&lt;span class=&#39;o&#39;&gt;]&lt;/span&gt;:80&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+	server_name blog.duxin.info&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+	location / &lt;span class=&#39;o&#39;&gt;{&lt;/span&gt;
+		proxy_pass http://blog.duxin.info&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_redirect  off&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_set_header        X-Real-IP &lt;span class=&#39;nv&#39;&gt;$remote_addr&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_set_header        X-Forwarded-For &lt;span class=&#39;nv&#39;&gt;$proxy_add_x_forwarded_for&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_set_header        Host    &lt;span class=&#39;nv&#39;&gt;$host&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_cache duxin&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_cache_valid 200 302 12h&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_cache_valid 301 1d&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_cache_valid any 1h&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_buffer_size 4k&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_buffers 4 32k&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_busy_buffers_size 64k&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+		proxy_temp_file_write_size 64k&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+	&lt;span class=&#39;o&#39;&gt;}&lt;/span&gt;
+&lt;span class=&#39;o&#39;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在chrome里面使用Page load time这个插件可以查看页面载入时间。nginx开启缓存前后页面载入速度对比：未开启 First response 716ms, Response end 402ms，开启后 First response 204ms，Response end 401ms，嗯，加速还是比较明显的。&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -126,11 +230,192 @@
  </entry>
  
  <entry>
+   <title>使用dnsmasq加速dns解析</title>
+   <link href="http://username.github.io/dnsmasq"/>
+   <updated>2011-08-16T00:00:00+08:00</updated>
+   <id>http://username.github.io/dnsmasq</id>
+   <content type="html">&lt;p&gt;Dnsmasq是一个轻量的dns缓存和dhcp服务器。我们可以使用dnsmasq通过缓存加速来dns解析，另外使用dnsmasq还可以实现一些更有趣的功能。&lt;/p&gt;
+
+&lt;h2 id=&quot;1dnsmasq&quot;&gt;1.安装dnsmasq&lt;/h2&gt;
+
+&lt;p&gt;大多数linux发行版都能够很容易地安装dnsmasq。如Gentoo中：&lt;code&gt;emerge dnsmasq&lt;/code&gt;即可。&lt;/p&gt;
+
+&lt;h2 id=&quot;2dnsmasq&quot;&gt;2.配置dnsmasq&lt;/h2&gt;
+
+&lt;p&gt;dnsmasq的配置文件为/etc/dnsmasq.conf，最简单的配置如下：&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;listen-address&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;127.0.0.1
+
+cache-size&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;150
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这样的配置后，再编辑/etc/resolv.conf加上nameserver 127.0.0.1就可以使用127.0.0.1即本地的dnsmasq作为dns服务器了。dnsmasq默认会使用/etc/resolv.conf中的nameserver来作为自己的上游dns服务器。你也可以自己指定dns服务器，如： resolv-file=/etc/dnsmasq_resolver&lt;/p&gt;
+
+&lt;p&gt;这样dnsmasq就使用/etc/dnsmasq_resolver文件中的dns服务器，这个文件可以任意指定，格式和/etc/resolv.conf的一样。像我的就是： nameserver 211.68.71.5 nameserver 211.68.71.4 nameserver 8.8.8.8&lt;/p&gt;
+
+&lt;h2 id=&quot;3dns&quot;&gt;3.为特定的域名指定dns服务器&lt;/h2&gt;
+
+&lt;p&gt;这个功能很有用，像我在教育网可以使用ipv6，于是访问Google的服务通过ipv6更稳定和快速，所以可以使用能够解析出Google ipv6地址的dns服务器：&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nv&#39;&gt;server&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;/google.com/2001:470:20::2 
+
+&lt;span class=&#39;nv&#39;&gt;server&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;/appspot.com/2001:470:20::2 
+
+&lt;span class=&#39;nv&#39;&gt;server&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;/blogspot.com/2001:470:20::2 
+
+&lt;span class=&#39;nv&#39;&gt;server&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;/google.com.hk/2001:470:20::2 
+
+&lt;span class=&#39;nv&#39;&gt;server&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;/youtube.com/2001:470:20::2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这样所有*.google.com的域名都使用2001:470:20::2这个dns服务器来解析，其他的域名类似。&lt;/p&gt;
+
+&lt;h2 id=&quot;4dnsmasqhosts&quot;&gt;4.用dnsmasq代替hosts文件&lt;/h2&gt;
+
+&lt;p&gt;这个比普通hosts文件方便的是普通的hosts不支持通配符，像*.phobos.apple.com 208.46.163.74是不可以的，在dnsmasq.conf里面则可以： address=/.phobos.apple.com/208.46.163.74&lt;/p&gt;
+
+&lt;p&gt;另外要让dnsmasq每次开机起作用，Gentoo下&lt;code&gt;rc-update add dnsmasq default&lt;/code&gt;，Arch下在/etc/rc.conf的DAEMONS列表添加dnsmasq就可以了。如果你每次dhcp都会重写/etc/resolv.conf文件，dhcpcd的话可以创建个/etc/resolv.conf.head文件，添加一行&lt;code&gt;nameserver 127.0.0.1&lt;/code&gt;，dhclient的话可以添加或编辑 /etc/dhclient.conf 文件添加&lt;code&gt;prepend domain-name-servers 127.0.0.1;&lt;/code&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>HE Tunnelbroker Server的选择</title>
+   <link href="http://username.github.io/he-tunnelbroker"/>
+   <updated>2011-07-23T00:00:00+08:00</updated>
+   <id>http://username.github.io/he-tunnelbroker</id>
+   <content type="html">&lt;p&gt;在家上网搜索Google总是被重置，还是学校的ipv6好。不过公网要用只能用隧道了，我选了he.net提供的tunnelbroker。&lt;/p&gt;
+
+&lt;p&gt;HE的服务器很多，ping了一下亚洲和北美的，然后比较之下选择了Seattle的服务器。现在下载byrbt基本能满速,youtube 720p也不卡。&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;Asia
+Hong Kong, HK
+--- 216.218.221.6 ping statistics ---
+20 packets transmitted, 12 received, 40% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19009ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 499.782/518.584/532.227/10.201 ms
+
+Singapore, SG
+--- 216.218.221.42 ping statistics ---
+20 packets transmitted, 13 received, 35% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19008ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 513.401/539.674/551.599/10.168 ms
+
+Tokyo, JP
+--- 74.82.46.6 ping statistics ---
+20 packets transmitted, 12 received, 40% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19007ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 355.273/367.665/379.252/7.338 ms
+
+North America
+Ashburn, VA, US
+--- 216.66.22.2 ping statistics ---
+20 packets transmitted, 11 received, 45% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19007ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 429.345/443.857/455.826/8.973 ms
+
+Chicago, IL, US
+--- 209.51.181.2 ping statistics ---
+20 packets transmitted, 9 received, 55% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19030ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 261.513/282.285/302.296/12.008 ms
+
+Dallas, TX, US
+--- 216.218.224.42 ping statistics ---
+20 packets transmitted, 14 received, 30% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19041ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 268.863/285.936/300.166/10.401 ms
+
+Fremont, CA, US
+--- 72.52.104.74 ping statistics ---
+20 packets transmitted, 16 received, 20% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19009ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 333.407/355.904/366.239/9.376 ms
+
+Los Angeles, CA, US
+--- 66.220.18.42 ping statistics ---
+20 packets transmitted, 12 received, 40% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19053ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 339.233/352.516/365.890/8.120 ms
+
+Miami, FL, US
+--- 209.51.161.58 ping statistics ---
+20 packets transmitted, 10 received, 50% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19037ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 345.260/360.491/375.250/9.561 ms
+
+New York, NY, US
+--- 209.51.161.14 ping statistics ---
+20 packets transmitted, 11 received, 45% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19051ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 416.298/434.382/445.309/9.733 ms
+
+Seattle, WA, US
+--- 216.218.226.238 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;19019ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 250.134/256.250/265.158/3.551 ms
+
+Toronto, ON, CA
+--- 216.66.38.58 ping statistics ---
+20 packets transmitted, 14 received, 30% packet loss, &lt;span class=&#39;nb&#39;&gt;time &lt;/span&gt;18999ms
+rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 525.444/542.232/559.514/11.509 ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里还找到个台湾的tunnelbroker列表&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tech.littlecho.tw/entry/IPv6-Tunnel-Brokers-in-Taiwan-and-IPv6-connectivity-test&quot;&gt;http://tech.littlecho.tw/entry/IPv6-Tunnel-Brokers-in-Taiwan-and-IPv6-connectivity-test&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;有空再测试一下速度。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>Openbox配置记录</title>
    <link href="http://username.github.io/openbox-configuration"/>
    <updated>2011-07-12T00:00:00+08:00</updated>
    <id>http://username.github.io/openbox-configuration</id>
-   <content type="html"></content>
+   <content type="html">&lt;p&gt;Gnome 3从发布以来用了好久，感觉不错，不过现在想换个口味了。但是KDE总感觉慢，而且感觉不怎么好看（我可能审美有问题），大家推荐的Awesome不是很习惯，于是就选了Openbox，搞了一个晚上，记录一下有些配置：&lt;/p&gt;
+
+&lt;p&gt;1.安装Openbox很简单&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pacman -S openbox&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;2.另外还要安装个panel，我选了pypanel，还要obconf和obmenu设置工具：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pacman -S pypanel obconf obmenu&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;obconf可以设置主题，我就用clearlooks了，这个才是经典。&lt;/p&gt;
+
+&lt;p&gt;obmenu可以图像化地设置Openbox的菜单，不用自己编辑menu.xml文件了。&lt;/p&gt;
+
+&lt;p&gt;3.不知道为什么用了SLiM以后输入法fcitx就不能在gtk程序下调出了，把export那些环境变量改到autostart.sh里面也一样，于是还是用startx启动X。Fcitx输入法和pypanel都添加到autostart.sh里面，启动Openbox后就可以启动这些程序。&lt;/p&gt;
+
+&lt;p&gt;4.pypanel中文乱码，修改~/.pypanelrc 的字体设置就可以了，我用的是wenquanyi micro hei-8。&lt;/p&gt;
+
+&lt;p&gt;5.启动器安装了个kupfer，nautilus用thunar替换掉，gnome-terminal用xfce4-terminal替换掉，其他还有些程序慢慢再来。&lt;/p&gt;
+
+&lt;p&gt;6.纠结了很久的USB自动挂载：&lt;/p&gt;
+
+&lt;p&gt;首先添加用户到storage组&lt;code&gt;sudo pacman -a ernest storage&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后添加hal到启动的daemon里面，在/etc/rc.conf里面&lt;/p&gt;
+
+&lt;p&gt;修改~/.xinitrc为&lt;code&gt;exec ck-launch-session openbox-session&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在thunar的preference里面enable volume management，把mount removable drives when hot-plugged勾上。&lt;/p&gt;
+
+&lt;p&gt;之前在Gnome 3下面设置的快捷键还能用，所以配置简单多了。以前也用过Openbox，设置壁纸要装feh，这次也不用，都是Gnome 3的设置，就不管了。大概就这些了。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>在Virtualbox里面体验Windows 8</title>
+   <link href="http://username.github.io/windows8"/>
+   <updated>2011-06-04T00:00:00+08:00</updated>
+   <id>http://username.github.io/windows8</id>
+   <content type="html">&lt;p&gt;今天端午假期加某敏感的日子，待在寝室里面闲得无聊。看到远景上有个Windows 8 Pre-M3的下载，就想看看传说中的Win 8是个样子。&lt;/p&gt;
+
+&lt;p&gt;大概500k/s左右的速度把镜像拖下来了，文件名为6.2.7959.0.110307-1930amd64freServerEnterpriseen-us-GB1SRVXFREREN_DVD.iso，然后没有空的分区，不想直接在电脑上装，于是用Virtualbox就好了，随手截了几个图(点击图片可以看大图)。&lt;/p&gt;
+
+&lt;p&gt;Installing Windows 8&lt;/p&gt;
+
+&lt;p&gt;安装界面和Win 7是一样的。&lt;/p&gt;
+
+&lt;p&gt;Windows 8 Login Screen&lt;/p&gt;
+
+&lt;p&gt;首次的登录界面，要求设置密码，还必须有大小写字母和数字，这个界面还写着Windows Server 2008 R2。&lt;/p&gt;
+
+&lt;p&gt;System Infomation&lt;/p&gt;
+
+&lt;p&gt;系统信息也显示的是Windows Server 2008 R2,只有安装的Lisense写着Windows 8。&lt;/p&gt;
+
+&lt;p&gt;Command Prompt&lt;/p&gt;
+
+&lt;p&gt;打开CMD，可以看到Windows的版本号，内核是6.2。&lt;/p&gt;
+
+&lt;p&gt;这次安装第一感觉是Windows 8的UI变化不大，基本和Windows 7和Windows Server 2008 R2是一样的，毕竟现在是早期开发阶段。除了外观的变化外，内核的变化我也就搞不懂了，反正估计变化也不大，或者微软会说一大堆的改进和新功能，但是其实对于桌面用户来说应该还是没有什么特别的。&lt;/p&gt;
+
+&lt;p&gt;本来还打算虚拟机装完后在电脑上直接装的，但是看到这个系统的界面变化不大，还是有点失望了（我本来就是去看UI变化的，抱歉，只有这么肤浅的追求……）。以前Windows 7刚beta的时候也是第一时刻就装了，当时还是很喜欢Windows 7的，遇到同学就推广Windows 7。不过后来就厌倦了，最烦的就是帮别人装系统，特别是Windows 7，本来这个没什么技术含量了。尤其要是个和计算机相关专业的男生还找你装系统的，你就真的只有无语了。看来自己现在对Windows真是没有什么兴趣了，好吧，没什么期待也好，继续专心的用Linux好了。&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -172,6 +457,63 @@ expect eof
 &lt;p&gt;其中username, hostname, yourpassword改成对应的用户名、主机名和密码，执行这个脚本就可以登录了，比较适合用ssh代理的情况。&lt;/p&gt;
 
 &lt;p&gt;以上两种方法相对于自己手动输入密码还是有点不安全的，第一种要是有人能够使用你的电脑就可以登录你的远程主机，第二种方法更是直接可以在脚本里面看到你的password了，所以要安全的话就还是不要怕麻烦再输入一遍密码好了。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Gnome 3使用感受</title>
+   <link href="http://username.github.io/gnome3"/>
+   <updated>2011-05-01T00:00:00+08:00</updated>
+   <id>http://username.github.io/gnome3</id>
+   <content type="html">&lt;p&gt;其实Gnome 3早在4月6号就发布了，4月9号还和很多童鞋很酱油地去参加了北京的Gnome 3 Launch Party。在用Gnome 3之前用了一段时间的Enlightenment，感觉也还是不错。不过对于我们这种从小用Gnome长大的人来说其他的桌面环境也就是玩玩，Gnome 3出来没有多久就又想转回Gnome了。&lt;/p&gt;
+
+&lt;p&gt;系统是用的Archlinux，安装Gnome 3还是很简单的，打开testing软件仓库就可以了。不过更新系统后却只能进入Gnome Fallback Mode，不知道怎么回事，反正并不是之前安Gnome Unstable时驱动的问题，也许是testing的软件包不稳定……后来看到 @wonderli 学长Gnome-Shell编译成功的文章，于是自己也照着编译了一次，果然就可以进Gnome Shell了。前几天又更新了一下系统，发现testing源里面的Gnome升级到了3.0.1，Archlinux打包好的Gnome Shell也可以用了。&lt;/p&gt;
+
+&lt;p&gt;Gnome Shell和以前的Gnome 2的界面比起来，去掉了底部的panel，其实以前我也总是把底部的panel删去了的，因为本来就没有什么用，这样增大了一点显示空间。顶部的panel左边的menu也没有了，被一个Acitivities代替，鼠标移至左上角或者按supper键可以触发Activities，中间是当前运行程序的窗口，左边是一个类似dock的快速启动栏，右边是可以根据运行程序自动增减的工作空间workspace，底部是消息栏，显示一些程序的消息提示。在激活Acitivities后可以搜索程序或者文件，在程序或者工作空间之间快速切换，或者把某个程序拖动到某个工作空间。以上操作不仅很方便，而且显示效果也很好看，反应迅速，一点也不卡。这个还是上个图来更直观了（点击图片看大图）：&lt;/p&gt;
+
+&lt;p&gt;如果不喜欢Gnome Shell可以回到Fallback Mode继续Gnome 2的经典界面，不过我觉得如果不是硬件问题不能用Gnome Shell的话完全没有必要换回去，用习惯了Gnome Shell就会非常喜欢这样的设计。&lt;/p&gt;
+
+&lt;p&gt;另外说说稍微不好的地方，顶部的panel感觉有点空旷了，除了一个Activities，显示当前程序，时钟，音量调节和用户就没有其他的了，貌似可以通过Gnome Shell Extension来添加一些东西，不过还是有点不便。&lt;/p&gt;
+
+&lt;p&gt;另外在Activities视图里面那个左边的dock也没有什么用，要启动个程序还要移动鼠标去点击一下，于是我就把常用的程序都用快捷键绑定好了，不用每次都切换到Acitivites然后在点击。顺便说一下我的快捷键是在gconf-editor里面设置的，设置apps-metacity的globalkeybindings和keybindingcommands就可以了。&lt;/p&gt;
+
+&lt;p&gt;默认主题也一般，而且没有找到可以改主题的地方，可以安装gnome-tweak-tool来简单调整，另外可以直接替换/usr/share/gnome-shell/theme里面的文件，wowubuntu这里有3个Gnome Shell的主题，感兴趣的同学可以去看看。&lt;/p&gt;
+
+&lt;p&gt;总的来说Gnome 3作为一个Gnome有里程碑意义的更新还是很不错的，值得大家去尝试。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>用命令行下载迅雷离线</title>
+   <link href="http://username.github.io/commandline-xunlei-offline"/>
+   <updated>2011-04-19T00:00:00+08:00</updated>
+   <id>http://username.github.io/commandline-xunlei-offline</id>
+   <content type="html">&lt;p&gt;搞了个迅雷会员，离线下载和高速通道用起来还是很实用的。不过迅雷显然只能在Windows下面用了，在虚拟机里面还是感觉很卡。另外虽然用浏览器打开 &lt;a href=&quot;http://lixian.xunlei.com&quot;&gt;http://lixian.vip.xunlei.com&lt;/a&gt; 也可以下载，不过由于在教育网速度很慢，只能挂代理了。教育网ipv6代理速度快的时候能达到2~3M/s，但是最近总是不太稳定，导致浏览器下载经常出问题，常常没下载完就显示完成了，如果用Firefox的Downthemall来下载更是无语，下载一大半然后又自动重下。&lt;/p&gt;
+
+&lt;p&gt;于是我想着能不能先把迅雷离线服务器上的东西下载到vps上，然后在从vps下载到自己电脑上。试了下还是可以实现的，关键是要把浏览器的cookie导出来，然后wget或aria2使用这个cookie来连接服务器就可以登录了。&lt;/p&gt;
+
+&lt;p&gt;Firefox的cookie可以用Export Cookies导出（Chrome暂时没有找到什么方法导出cookie），然后将cookies.txt上传到vps; 迅雷离线服务器下载好了以后，选择资源复制下载链接; 然后&lt;code&gt;wget –load-cookies=cookiefile &amp;#39;url&amp;#39; -o outputfilename&lt;/code&gt; 就可以了。如果觉得wget不够快，可以换用aria2多线程下载，加上参数-s，&lt;code&gt;aria2c –load-cookies=cookiefile -s 5 &amp;#39;url&amp;#39; -o outputfilename&lt;/code&gt;，就是将文件分成5份来下载。等到vps下载好了之后就可以用sftp，ftp，http等方法把文件下载到自己的电脑了。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>ubuntu ppa反向代理</title>
+   <link href="http://username.github.io/ubuntu-revese-proxy"/>
+   <updated>2011-03-03T00:00:00+08:00</updated>
+   <id>http://username.github.io/ubuntu-revese-proxy</id>
+   <content type="html">&lt;p&gt;用ubuntu的同学都知道ppa源的速度特别慢，于是刚在国外vps上建了反向代理，加速ppa的下载。&lt;/p&gt;
+
+&lt;p&gt;自己试了下速度很快，截图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/ubuntu.png&quot; alt=&quot;ubuntu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这是平均速度&lt;/p&gt;
+
+&lt;p&gt;要使用的同学请修改/etc/hosts文件，添加:&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;2607:f878:3:2:0:300:2213:10 ppa.launchpad.net
+
+2607:f878:3:2:0:300:2213:10 keyserver.ubuntu.com
+
+2607:f878:3:2:0:300:2213:10 launchpad.net
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;暂时只有ipv6可以连接，希望大家能够反馈使用效果。&lt;/p&gt;</content>
  </entry>
  
  

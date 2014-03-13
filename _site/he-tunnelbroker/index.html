@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Google Public DNS IPv6 addresses</title>
+    <title>HE Tunnelbroker Server的选择</title>
     <meta name="description" content="">
     <meta name="author" content="Ernest Du">
 
@@ -106,25 +106,85 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Google Public DNS IPv6 addresses </h1>
+  <h1>HE Tunnelbroker Server的选择 </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>09 October 2011</span>
+      <span>23 July 2011</span>
     </div>
     <div class="content">
-      <p>也不知道什么时候有的，今天才发现。</p>
+      <p>在家上网搜索Google总是被重置，还是学校的ipv6好。不过公网要用只能用隧道了，我选了he.net提供的tunnelbroker。</p>
 
-<p><a href="https://developers.google.com/speed/public-dns/docs/using">Google Public DNS IPv6 addresses:</a></p>
-<div class='highlight'><pre><code class='bash'>2001:4860:4860::8888
+<p>HE的服务器很多，ping了一下亚洲和北美的，然后比较之下选择了Seattle的服务器。现在下载byrbt基本能满速,youtube 720p也不卡。</p>
+<div class='highlight'><pre><code class='bash'>Asia
+Hong Kong, HK
+--- 216.218.221.6 ping statistics ---
+20 packets transmitted, 12 received, 40% packet loss, <span class='nb'>time </span>19009ms
+rtt min/avg/max/mdev <span class='o'>=</span> 499.782/518.584/532.227/10.201 ms
 
-2001:4860:4860::8844
+Singapore, SG
+--- 216.218.221.42 ping statistics ---
+20 packets transmitted, 13 received, 35% packet loss, <span class='nb'>time </span>19008ms
+rtt min/avg/max/mdev <span class='o'>=</span> 513.401/539.674/551.599/10.168 ms
+
+Tokyo, JP
+--- 74.82.46.6 ping statistics ---
+20 packets transmitted, 12 received, 40% packet loss, <span class='nb'>time </span>19007ms
+rtt min/avg/max/mdev <span class='o'>=</span> 355.273/367.665/379.252/7.338 ms
+
+North America
+Ashburn, VA, US
+--- 216.66.22.2 ping statistics ---
+20 packets transmitted, 11 received, 45% packet loss, <span class='nb'>time </span>19007ms
+rtt min/avg/max/mdev <span class='o'>=</span> 429.345/443.857/455.826/8.973 ms
+
+Chicago, IL, US
+--- 209.51.181.2 ping statistics ---
+20 packets transmitted, 9 received, 55% packet loss, <span class='nb'>time </span>19030ms
+rtt min/avg/max/mdev <span class='o'>=</span> 261.513/282.285/302.296/12.008 ms
+
+Dallas, TX, US
+--- 216.218.224.42 ping statistics ---
+20 packets transmitted, 14 received, 30% packet loss, <span class='nb'>time </span>19041ms
+rtt min/avg/max/mdev <span class='o'>=</span> 268.863/285.936/300.166/10.401 ms
+
+Fremont, CA, US
+--- 72.52.104.74 ping statistics ---
+20 packets transmitted, 16 received, 20% packet loss, <span class='nb'>time </span>19009ms
+rtt min/avg/max/mdev <span class='o'>=</span> 333.407/355.904/366.239/9.376 ms
+
+Los Angeles, CA, US
+--- 66.220.18.42 ping statistics ---
+20 packets transmitted, 12 received, 40% packet loss, <span class='nb'>time </span>19053ms
+rtt min/avg/max/mdev <span class='o'>=</span> 339.233/352.516/365.890/8.120 ms
+
+Miami, FL, US
+--- 209.51.161.58 ping statistics ---
+20 packets transmitted, 10 received, 50% packet loss, <span class='nb'>time </span>19037ms
+rtt min/avg/max/mdev <span class='o'>=</span> 345.260/360.491/375.250/9.561 ms
+
+New York, NY, US
+--- 209.51.161.14 ping statistics ---
+20 packets transmitted, 11 received, 45% packet loss, <span class='nb'>time </span>19051ms
+rtt min/avg/max/mdev <span class='o'>=</span> 416.298/434.382/445.309/9.733 ms
+
+Seattle, WA, US
+--- 216.218.226.238 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, <span class='nb'>time </span>19019ms
+rtt min/avg/max/mdev <span class='o'>=</span> 250.134/256.250/265.158/3.551 ms
+
+Toronto, ON, CA
+--- 216.66.38.58 ping statistics ---
+20 packets transmitted, 14 received, 30% packet loss, <span class='nb'>time </span>18999ms
+rtt min/avg/max/mdev <span class='o'>=</span> 525.444/542.232/559.514/11.509 ms
 </code></pre></div>
-<p>这ip还算好记，不过暂时不会像ordns.he.net(2001:470:20::2)那样返回Google相关域名的ipv6地址。</p>
+<p>这里还找到个台湾的tunnelbroker列表</p>
 
-<p>另外今天才知道为什么在不同的地点ping 8.8.8.8, 2001:470:20::2或者2001:4860:4860::8888这些ip都很快的原因，因为它们使用了anycast任播技术，实际的服务器是分布在很多不同地理位置的，比如全球13个根域名服务器”a~m.root-servers.net”，其中部分并不只有单一个服务器，是以任播技术在全球多个地点设立镜像站。好嘛，我觉得需要去补计算机网络知识了。</p>
+<p><a href="http://tech.littlecho.tw/entry/IPv6-Tunnel-Brokers-in-Taiwan-and-IPv6-connectivity-test">http://tech.littlecho.tw/entry/IPv6-Tunnel-Brokers-in-Taiwan-and-IPv6-connectivity-test</a></p>
+
+<p>有空再测试一下速度。</p>
     </div>
 
   
@@ -155,13 +215,11 @@
 
   
      
-    	<li><a href="/tags.html#dns-ref">dns <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#google-ref">google <span>1</span></a></li>
-     
     	<li><a href="/tags.html#ipv6-ref">ipv6 <span>4</span></a></li>
      
     	<li><a href="/tags.html#network-ref">network <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#tunnelbroker-ref">tunnelbroker <span>1</span></a></li>
     
   
 
@@ -174,10 +232,10 @@
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/dnsmasq" title="使用dnsmasq加速dns解析">&larr; Previous</a></li>
+        <li class="prev"><a href="/openbox-configuration" title="Openbox配置记录">&larr; Previous</a></li>
       
       
-        <li class="next"><a href="/nginx-reverse-proxy-cache" title="让nginx反向代理使用缓存">Next &rarr;</a></li>
+        <li class="next"><a href="/dnsmasq" title="使用dnsmasq加速dns解析">Next &rarr;</a></li>
       
       </ul>
     </div>

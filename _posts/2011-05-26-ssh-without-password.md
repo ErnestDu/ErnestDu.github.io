@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "不输入密码登录ssh"
-category: Linux
+category: tech
 tags: [ssh, linux, putty, password]
 ---
 

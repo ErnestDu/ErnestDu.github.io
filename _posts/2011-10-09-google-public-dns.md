@@ -2,8 +2,8 @@
 layout: post
 title: "Google Public DNS IPv6 addresses"
 description: ""
-category: Network
-tags: [dns, google, ipv6]
+category: tech
+tags: [dns, google, ipv6, network]
 ---
 {% include JB/setup %}
 
