@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Ernest's Blog</title>
- <link href="http://username.github.io/" rel="self"/>
- <link href="http://username.github.io"/>
- <updated>2014-03-13T22:52:36+08:00</updated>
- <id>http://username.github.io</id>
+ <link href="http://ErnestDu.github.io/" rel="self"/>
+ <link href="http://ErnestDu.github.io"/>
+ <updated>2014-03-16T22:45:07+08:00</updated>
+ <id>http://ErnestDu.github.io</id>
  <author>
    <name>Ernest Du</name>
    <email>hongqingdu@gmail.com</email>
@@ -14,17 +14,17 @@
  
  <entry>
    <title>测试</title>
-   <link href="http://username.github.io/test-page"/>
+   <link href="http://ErnestDu.github.io/test-page"/>
    <updated>2014-03-09T22:03:48Z</updated>
-   <id>http://username.github.io/test-page</id>
+   <id>http://ErnestDu.github.io/test-page</id>
    <content type="html">&lt;p&gt;这是一个测试页面。&lt;/p&gt;</content>
  </entry>
  
  <entry>
    <title>Welcome to Jekyll!</title>
-   <link href="http://username.github.io/welcome-to-jekyll"/>
+   <link href="http://ErnestDu.github.io/welcome-to-jekyll"/>
    <updated>2014-03-08T22:03:48Z</updated>
-   <id>http://username.github.io/welcome-to-jekyll</id>
+   <id>http://ErnestDu.github.io/welcome-to-jekyll</id>
    <content type="html">&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
@@ -39,9 +39,9 @@
  
  <entry>
    <title>SIP环境搭建</title>
-   <link href="http://username.github.io/sip-setup"/>
+   <link href="http://ErnestDu.github.io/sip-setup"/>
    <updated>2013-03-24T00:00:00+08:00</updated>
-   <id>http://username.github.io/sip-setup</id>
+   <id>http://ErnestDu.github.io/sip-setup</id>
    <content type="html">&lt;p&gt;最近在实验室做的东西和SIP有关，所以要搭建SIP的环境。&lt;/p&gt;
 
 &lt;h3 id=&quot;&quot;&gt;服务器&lt;/h3&gt;
@@ -82,9 +82,9 @@
  
  <entry>
    <title>2012北京马拉松小记</title>
-   <link href="http://username.github.io/beijing-marathon-2012"/>
+   <link href="http://ErnestDu.github.io/beijing-marathon-2012"/>
    <updated>2012-11-30T00:00:00+08:00</updated>
-   <id>http://username.github.io/beijing-marathon-2012</id>
+   <id>http://ErnestDu.github.io/beijing-marathon-2012</id>
    <content type="html">&lt;p&gt;好久不写blog了，前几天去跑了北京马拉松还是来总结一下。&lt;/p&gt;
 
 &lt;p&gt;去年第一次就跑完了全程，所以今年也一直想着要继续参加全程马拉松，但是报名却一直没有开始（感谢18大），最后时间定在11月25号，已经是寒冷的冬天了，犹豫了下，不过还是报了名。&lt;/p&gt;
@@ -100,9 +100,9 @@
  
  <entry>
    <title>北邮校园网登录脚本（Shell & Greasemonkey）</title>
-   <link href="http://username.github.io/bupt-gateway-auto-login"/>
+   <link href="http://ErnestDu.github.io/bupt-gateway-auto-login"/>
    <updated>2012-03-05T00:00:00+08:00</updated>
-   <id>http://username.github.io/bupt-gateway-auto-login</id>
+   <id>http://ErnestDu.github.io/bupt-gateway-auto-login</id>
    <content type="html">&lt;p&gt;学校的网络自从启用登录验证后总有些不方便，虽然有客户端，但是我一直对这类软件比较讨厌。&lt;/p&gt;
 
 &lt;p&gt;不过还是有办法的，查看登录页面的源代码，发现登录的时候把密码是md5加密后和用户名以及其他信息POST到服务器；注销密码没有加密。&lt;/p&gt;
@@ -126,9 +126,9 @@
  
  <entry>
    <title>考研小结</title>
-   <link href="http://username.github.io/exam"/>
+   <link href="http://ErnestDu.github.io/exam"/>
    <updated>2012-01-09T00:00:00+08:00</updated>
-   <id>http://username.github.io/exam</id>
+   <id>http://ErnestDu.github.io/exam</id>
    <content type="html">&lt;p&gt;今天终于考完了，感觉一般吧，数学比预计差些，专业课差很多，英语政治貌似要好点，总体来说自己的水平就这样，发挥也还算正常，不要求更高的表现了。其他无所谓了，考挂了又不用补考，怕毛啊。&lt;/p&gt;
 
 &lt;p&gt;至少最近终于可以稍微放松点了，考完期末考试就能够回家了&lt;/p&gt;</content>
@@ -136,9 +136,9 @@
  
  <entry>
    <title>Linux下独立使用搜狗浏览器代理</title>
-   <link href="http://username.github.io/sogou-proxy"/>
+   <link href="http://ErnestDu.github.io/sogou-proxy"/>
    <updated>2011-11-03T00:00:00+08:00</updated>
-   <id>http://username.github.io/sogou-proxy</id>
+   <id>http://ErnestDu.github.io/sogou-proxy</id>
    <content type="html">&lt;p&gt;教育网实在是蛋疼，国外代理经常出问题，而且访问国内网站不够快，于是又想起用搜狗浏览器的代理了。Linux下面用wine安装，启动搜狗浏览器，然后Firefox挂代理上网。&lt;/p&gt;
 
 &lt;p&gt;嫌麻烦了，于是就想办法不启动搜狗浏览器。其实和windows下面单独使用搜狗浏览器代理原理类似，只能用旧的版本了 http://download.ie.sogou.com/sogouexplorer1.1beta.exe ，安装好后运行，启用加速，然后在终端里面执行ps aux |grep sogou ，可以看到这样的结果&lt;/p&gt;
@@ -150,9 +150,9 @@
  
  <entry>
    <title>2011北京马拉松小记</title>
-   <link href="http://username.github.io/beijing-marathon-2013"/>
+   <link href="http://ErnestDu.github.io/beijing-marathon-2013"/>
    <updated>2011-10-16T00:00:00+08:00</updated>
-   <id>http://username.github.io/beijing-marathon-2013</id>
+   <id>http://ErnestDu.github.io/beijing-marathon-2013</id>
    <content type="html">&lt;p&gt;今天和 @goophile @wxd08 @kwj007 还有飞哥强哥参加了北京马拉松。经过近6小时的长跑，我们成功地完成了全程42.195km的路程。&lt;/p&gt;
 
 &lt;p&gt;之前也一直没有想到能够跑完全程，我们训练最多也就跑了15km，然后走5km。平时练的最多的就是10公里，一般要1小时几分钟。我们估计的也就是勉强跑完半程，然后再尽量多跑一点。&lt;/p&gt;
@@ -170,9 +170,9 @@
  
  <entry>
    <title>VPS更换为PhotonVPS</title>
-   <link href="http://username.github.io/photon-vps"/>
+   <link href="http://ErnestDu.github.io/photon-vps"/>
    <updated>2011-10-09T00:00:00+08:00</updated>
-   <id>http://username.github.io/photon-vps</id>
+   <id>http://ErnestDu.github.io/photon-vps</id>
    <content type="html">&lt;p&gt;之前的BurstNET ipv6总是连不上，于是只好换了。最后在Rapidxen和PhotonVPS中选择了PhotonVPS 。PhotonVPS 貌似口碑不错，我选择的是Warp .25方案：内存128M，流量300G，一个ipv4 ip，10个ipv6 ip，月费是 $ 5.95 USD，我选了按季度付费，$ 16.07 USD，比BurstNET的价格还便宜一点。&lt;/p&gt;
 
 &lt;p&gt;这个配置没有以前的VPS高，于是另外又买了东哥 @cosbeta 的homezz虚拟主机来放blog。现在用VPS来做blog及其图床的ipv6反向代理，方便教育网用户访问。以前VPS上的Ubuntu PPA ipv6反向代理就只有关闭了，同学们自己另找代理吧。&lt;/p&gt;</content>
@@ -180,9 +180,9 @@
  
  <entry>
    <title>让nginx反向代理使用缓存</title>
-   <link href="http://username.github.io/nginx-reverse-proxy-cache"/>
+   <link href="http://ErnestDu.github.io/nginx-reverse-proxy-cache"/>
    <updated>2011-10-09T00:00:00+08:00</updated>
-   <id>http://username.github.io/nginx-reverse-proxy-cache</id>
+   <id>http://ErnestDu.github.io/nginx-reverse-proxy-cache</id>
    <content type="html">&lt;p&gt;为了不让每次通过ipv6访问blog时都要vps从虚拟主机那边读取数据浪费时间，可以在vps上建立缓存，加快速度。&lt;/p&gt;
 
 &lt;p&gt;直接贴在网上找的代码：&lt;/p&gt;
@@ -214,9 +214,9 @@ server
  
  <entry>
    <title>Google Public DNS IPv6 addresses</title>
-   <link href="http://username.github.io/google-public-dns"/>
+   <link href="http://ErnestDu.github.io/google-public-dns"/>
    <updated>2011-10-09T00:00:00+08:00</updated>
-   <id>http://username.github.io/google-public-dns</id>
+   <id>http://ErnestDu.github.io/google-public-dns</id>
    <content type="html">&lt;p&gt;也不知道什么时候有的，今天才发现。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://developers.google.com/speed/public-dns/docs/using&quot;&gt;Google Public DNS IPv6 addresses:&lt;/a&gt;&lt;/p&gt;
@@ -231,9 +231,9 @@ server
  
  <entry>
    <title>使用dnsmasq加速dns解析</title>
-   <link href="http://username.github.io/dnsmasq"/>
+   <link href="http://ErnestDu.github.io/dnsmasq"/>
    <updated>2011-08-16T00:00:00+08:00</updated>
-   <id>http://username.github.io/dnsmasq</id>
+   <id>http://ErnestDu.github.io/dnsmasq</id>
    <content type="html">&lt;p&gt;Dnsmasq是一个轻量的dns缓存和dhcp服务器。我们可以使用dnsmasq通过缓存加速来dns解析，另外使用dnsmasq还可以实现一些更有趣的功能。&lt;/p&gt;
 
 &lt;h2 id=&quot;1dnsmasq&quot;&gt;1.安装dnsmasq&lt;/h2&gt;
@@ -275,9 +275,9 @@ cache-size&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;150
  
  <entry>
    <title>HE Tunnelbroker Server的选择</title>
-   <link href="http://username.github.io/he-tunnelbroker"/>
+   <link href="http://ErnestDu.github.io/he-tunnelbroker"/>
    <updated>2011-07-23T00:00:00+08:00</updated>
-   <id>http://username.github.io/he-tunnelbroker</id>
+   <id>http://ErnestDu.github.io/he-tunnelbroker</id>
    <content type="html">&lt;p&gt;在家上网搜索Google总是被重置，还是学校的ipv6好。不过公网要用只能用隧道了，我选了he.net提供的tunnelbroker。&lt;/p&gt;
 
 &lt;p&gt;HE的服务器很多，ping了一下亚洲和北美的，然后比较之下选择了Seattle的服务器。现在下载byrbt基本能满速,youtube 720p也不卡。&lt;/p&gt;
@@ -352,9 +352,9 @@ rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 525.444/542.23
  
  <entry>
    <title>Openbox配置记录</title>
-   <link href="http://username.github.io/openbox-configuration"/>
+   <link href="http://ErnestDu.github.io/openbox-configuration"/>
    <updated>2011-07-12T00:00:00+08:00</updated>
-   <id>http://username.github.io/openbox-configuration</id>
+   <id>http://ErnestDu.github.io/openbox-configuration</id>
    <content type="html">&lt;p&gt;Gnome 3从发布以来用了好久，感觉不错，不过现在想换个口味了。但是KDE总感觉慢，而且感觉不怎么好看（我可能审美有问题），大家推荐的Awesome不是很习惯，于是就选了Openbox，搞了一个晚上，记录一下有些配置：&lt;/p&gt;
 
 &lt;p&gt;1.安装Openbox很简单&lt;/p&gt;
@@ -390,9 +390,9 @@ rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 525.444/542.23
  
  <entry>
    <title>在Virtualbox里面体验Windows 8</title>
-   <link href="http://username.github.io/windows8"/>
+   <link href="http://ErnestDu.github.io/windows8"/>
    <updated>2011-06-04T00:00:00+08:00</updated>
-   <id>http://username.github.io/windows8</id>
+   <id>http://ErnestDu.github.io/windows8</id>
    <content type="html">&lt;p&gt;今天端午假期加某敏感的日子，待在寝室里面闲得无聊。看到远景上有个Windows 8 Pre-M3的下载，就想看看传说中的Win 8是个样子。&lt;/p&gt;
 
 &lt;p&gt;大概500k/s左右的速度把镜像拖下来了，文件名为6.2.7959.0.110307-1930amd64freServerEnterpriseen-us-GB1SRVXFREREN_DVD.iso，然后没有空的分区，不想直接在电脑上装，于是用Virtualbox就好了，随手截了几个图(点击图片可以看大图)。&lt;/p&gt;
@@ -420,9 +420,9 @@ rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 525.444/542.23
  
  <entry>
    <title>不输入密码登录ssh</title>
-   <link href="http://username.github.io/ssh-without-password"/>
+   <link href="http://ErnestDu.github.io/ssh-without-password"/>
    <updated>2011-05-26T00:00:00+08:00</updated>
-   <id>http://username.github.io/ssh-without-password</id>
+   <id>http://ErnestDu.github.io/ssh-without-password</id>
    <content type="html">&lt;p&gt;使用ssh每次都要输入登录密码，感觉太麻烦，还是有办法不输入密码的。有两个办法，一种ssh是可以使用 authentication key登录的，另一种就是用expect自动输入密码。&lt;/p&gt;
 
 &lt;h2 id=&quot;1_ssh&quot;&gt;1. 用ssh密钥的办法：&lt;/h2&gt;
@@ -461,9 +461,9 @@ expect eof
  
  <entry>
    <title>Gnome 3使用感受</title>
-   <link href="http://username.github.io/gnome3"/>
+   <link href="http://ErnestDu.github.io/gnome3"/>
    <updated>2011-05-01T00:00:00+08:00</updated>
-   <id>http://username.github.io/gnome3</id>
+   <id>http://ErnestDu.github.io/gnome3</id>
    <content type="html">&lt;p&gt;其实Gnome 3早在4月6号就发布了，4月9号还和很多童鞋很酱油地去参加了北京的Gnome 3 Launch Party。在用Gnome 3之前用了一段时间的Enlightenment，感觉也还是不错。不过对于我们这种从小用Gnome长大的人来说其他的桌面环境也就是玩玩，Gnome 3出来没有多久就又想转回Gnome了。&lt;/p&gt;
 
 &lt;p&gt;系统是用的Archlinux，安装Gnome 3还是很简单的，打开testing软件仓库就可以了。不过更新系统后却只能进入Gnome Fallback Mode，不知道怎么回事，反正并不是之前安Gnome Unstable时驱动的问题，也许是testing的软件包不稳定……后来看到 @wonderli 学长Gnome-Shell编译成功的文章，于是自己也照着编译了一次，果然就可以进Gnome Shell了。前几天又更新了一下系统，发现testing源里面的Gnome升级到了3.0.1，Archlinux打包好的Gnome Shell也可以用了。&lt;/p&gt;
@@ -483,9 +483,9 @@ expect eof
  
  <entry>
    <title>用命令行下载迅雷离线</title>
-   <link href="http://username.github.io/commandline-xunlei-offline"/>
+   <link href="http://ErnestDu.github.io/commandline-xunlei-offline"/>
    <updated>2011-04-19T00:00:00+08:00</updated>
-   <id>http://username.github.io/commandline-xunlei-offline</id>
+   <id>http://ErnestDu.github.io/commandline-xunlei-offline</id>
    <content type="html">&lt;p&gt;搞了个迅雷会员，离线下载和高速通道用起来还是很实用的。不过迅雷显然只能在Windows下面用了，在虚拟机里面还是感觉很卡。另外虽然用浏览器打开 &lt;a href=&quot;http://lixian.xunlei.com&quot;&gt;http://lixian.vip.xunlei.com&lt;/a&gt; 也可以下载，不过由于在教育网速度很慢，只能挂代理了。教育网ipv6代理速度快的时候能达到2~3M/s，但是最近总是不太稳定，导致浏览器下载经常出问题，常常没下载完就显示完成了，如果用Firefox的Downthemall来下载更是无语，下载一大半然后又自动重下。&lt;/p&gt;
 
 &lt;p&gt;于是我想着能不能先把迅雷离线服务器上的东西下载到vps上，然后在从vps下载到自己电脑上。试了下还是可以实现的，关键是要把浏览器的cookie导出来，然后wget或aria2使用这个cookie来连接服务器就可以登录了。&lt;/p&gt;
@@ -495,14 +495,14 @@ expect eof
  
  <entry>
    <title>ubuntu ppa反向代理</title>
-   <link href="http://username.github.io/ubuntu-revese-proxy"/>
+   <link href="http://ErnestDu.github.io/ubuntu-revese-proxy"/>
    <updated>2011-03-03T00:00:00+08:00</updated>
-   <id>http://username.github.io/ubuntu-revese-proxy</id>
+   <id>http://ErnestDu.github.io/ubuntu-revese-proxy</id>
    <content type="html">&lt;p&gt;用ubuntu的同学都知道ppa源的速度特别慢，于是刚在国外vps上建了反向代理，加速ppa的下载。&lt;/p&gt;
 
 &lt;p&gt;自己试了下速度很快，截图&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/ubuntu.png&quot; alt=&quot;ubuntu&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ErnestDu.github.io/assets/images/ubuntu.png&quot; alt=&quot;ubuntu&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这是平均速度&lt;/p&gt;
 
@@ -514,6 +514,82 @@ expect eof
 2607:f878:3:2:0:300:2213:10 launchpad.net
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;暂时只有ipv6可以连接，希望大家能够反馈使用效果。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Windows下删除Linux后重装系统</title>
+   <link href="http://ErnestDu.github.io/linux-grub"/>
+   <updated>2009-01-30T00:00:00+08:00</updated>
+   <id>http://ErnestDu.github.io/linux-grub</id>
+   <content type="html">&lt;p&gt;昨天晚上忙了一天给电脑重装系统。&lt;/p&gt;
+
+&lt;p&gt;本来以前安装了Linux，系统是靠Grub引导启动的，重新安装XP后，我就直接删掉Linux分区，然后格式化硬盘，打算以后装Ubuntu和XP的双系统。结果没想到就出问题了，电脑重启后，Grub启动，然后就提示Grub Error 17，无法启动xp了。&lt;/p&gt;
+
+&lt;p&gt;没有办法，用手机上网查，大概明白了，Linux虽然被直接删掉了，可是Grub并没有，而Grub又仍然按照以前的配置来启动，结果无法识别现在的新分区，所以无法启动了。&lt;/p&gt;
+
+&lt;p&gt;这个又该怎样解决呢？大概有三种：1.在dos下修复MBR主引导记录，具体命令可以查到。我是不懂DOS这样的老古董了（尽管小学学过）。而且我并没有DOS启动盘，所以这个办法只有Pass。&lt;/p&gt;
+
+&lt;p&gt;2.使用XP的安装光盘，来修复。必须是安装盘，Ghost系统不行。Faint,我刚买的深度Ghost XP又没有用（还是正版好啊！精神上支持一下）。&lt;/p&gt;
+
+&lt;p&gt;3.使用Linux安装盘修复Grub，我试了一下，小心翼翼地敲入命令以后，重启，仍然是Error 17。RP有问题吗？郁闷，可能是Linux分区已经不存在了，Grub修复也不起作用。&lt;/p&gt;
+
+&lt;p&gt;最后只好自己想办法，反正电脑里没重要的东西，不怕。经过多次尝试，发现Linux系统自带了一个卸载系统的选项，也许先重装一遍Linux，再在Linux里卸载（不是直接删除）Linux。&lt;/p&gt;
+
+&lt;p&gt;删完Linux后电脑是无法启动的，Grub也没有了，看样子是把Grub卸载了，于是我再将XP的光盘放进去，重装XP。这次应该没问题了吧，我把电脑再次重启，结果还是不行，没有Grub,但是XP也进不去。再次把XP的光盘放进电脑，重启，打算重装一遍，结果电脑一下子就黑屏了，就像突然停电一样。难道多次重装系统，电脑坏了？按下Power，又启动了，这次先不装，用光盘里的工具检查了一下电脑，结果发现硬盘的分割表错误# 114，不懂，手机上网查，要用光盘里的分区工具修复，只好又开始重新分区。分完区后重装XP，取出光盘，再次启动，终于看到了启动画面，唉，不容易啊。而这个时候已经是晚上12点了（我是8点就开始了的啊）。&lt;/p&gt;
+
+&lt;p&gt;这次可以算是我最为曲折一次的重装系统了，一切都不是想象的那样简单，当然也不是没有办法。还有就是一定不要在Windows下直接删除Linux分区了，那样很麻烦，一定要使用Linux自带的卸载程序。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>盗版软件</title>
+   <link href="http://ErnestDu.github.io/illegal-software"/>
+   <updated>2009-01-22T00:00:00+08:00</updated>
+   <id>http://ErnestDu.github.io/illegal-software</id>
+   <content type="html">&lt;p&gt;这两天在网上下了不少软件，因为自己想学点图像处理、网页设计等，就下了Adobe Photoshop、Flash、Dreamweaver等。下载的都是免费的绿色免安装版本，下的时候顺便的官方网站上看看了看，一看就吓了一跳，好贵啊！Photoshop CS 4 官方价格是699美元，Flash CS 4 也699美元，Fireworks CS 4 便宜点也要299美元……其他的软件也大概这样。像Adobe Creative Suite 包含了多个软件的合集更是要价1399美元。&lt;/p&gt;
+
+&lt;p&gt;反过来，在中国好像所有的软件都可以用到不用钱的，破解高手早就为我们提供了免费的软件。不仅如此，还可以看到免安装的，绿色的，优化的各种改造过的版本。的确下个免安装的放在u盘里，很方便，从这点来说，盗版做得比正版还好。不过知识产权的问题就没有保护好了，我们也许使用了盗版并不觉得有什么不好，但是不管怎么说总是不好的。这一点我就不好说了，用盗版毕竟不光彩，自己知道就行了。&lt;/p&gt;
+
+&lt;p&gt;但是有的软件，我们可以找到其他的免费软件替代，而且这些合法的免费软件功能不见得比正版差，比如Microsoft Offic 就可以用WPS 来替代，WPS现在面向个人用户推出了免费版，全面兼容Office，功能强大，而且更重要的是这是我们中国人自己的办公软件。还有杀毒软件也有许多的免费了，如360 ，瑞星Google专版 等。压缩解压常用的winrar，也可以用7-Zip 来代替。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Windows7 安装成功了！</title>
+   <link href="http://ErnestDu.github.io/install-windows7"/>
+   <updated>2009-01-21T00:00:00+08:00</updated>
+   <id>http://ErnestDu.github.io/install-windows7</id>
+   <content type="html">&lt;p&gt;Windows 7 是微软下一代操作系统预计今年下半年发布，现在可以下载到它的测试版（bt种子下载 ）。下载后的iso镜像文件有2.43G，然后就可以安装了。&lt;/p&gt;
+
+&lt;p&gt;安装有几种方法：1、将镜像文件刻成光盘，放入光盘重启电脑，按照提示一步一步就可以安装了。&lt;/p&gt;
+
+&lt;p&gt;2、在虚拟机里安装。虚拟机软件很多，如virtual pc、vmware、virtualbox等，具体使用方法自己可以上Google查一查。其实这种方法并不是真的安装了Windows 7。不过可以先在虚拟机里试用一下。&lt;/p&gt;
+
+&lt;p&gt;3、从硬盘安装。我的电脑没有刻录光驱，所以采用的是这种方法。下面具体介绍一下：安装环境Windows xp sp 2，另外需要winmount ，一个空的盘，建议不要安装在C盘，毕竟这只是测试版，以前的系统要留着。大小15G左右，NTFS文件系统。winmount安装完后，将 Windows7镜像文件winmount成一个虚拟盘，点击它，安装就开始了,中间电脑会重启几次。最后完成安装，就启动Windows 7 了。然后简单配置一下就可以上网了，大部分xp下的软件也都能用。至于其他的就暂时不知道了，我也刚开始使用，慢慢体会吧。&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>如何在教育网访问国外网站1</title>
+   <link href="http://ErnestDu.github.io/cernet1"/>
+   <updated>2009-01-21T00:00:00+08:00</updated>
+   <id>http://ErnestDu.github.io/cernet1</id>
+   <content type="html">&lt;p&gt;我们大学校园里的网络是使用的中国教育和科研计算机网 ，简称教育网，是国家骨干网之一。不过教育网用户一般是不能直接访问国外的网站的。其实以前是可以的，不过涉及了些利益问题，现在不行了（这个暂且不讨 论）。日常应用中经常遇到需要访问国外网站的情况，因此了解一下教育网访问国外网站的方法还是会很有帮助的。其实基本的原理是一样的，就是要找到代理服务器，这就相当于是一个中转站，让它帮我们访问然后将内容发送过来。下面是具体的方法：&lt;/p&gt;
+
+&lt;p&gt;1.使用付费的代理，如教育网直通车 ，因为需要钱，我没有使用过。应该速度是有保证的，Money多同学可以试试。&lt;/p&gt;
+
+&lt;p&gt;2.使用免费的在线代理，这种方法比较简单，不过不支持cookies，https加密连接也不行，只适合一般的网页浏览。具体的在线代理站可以自己上Google 搜。还有更简单办法，直接在要访问的网址后加 .edu.cn 这个方法我试过，速度还不错。如访问www.youtube.com 就在浏览器地址栏输入www.youtube.com.edu.cn 就可以了。不过今天在家里再试就不行了，因为我家的是电信线路。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;普通代理，这是最原始的办法，比较繁琐，不过个人认为是最好的办法。首先要找到代理服务器。这个就求助于搜索引擎了，搜索教育网代理就可以了。找到后的代 理包括了一下信息：ip地址、端口port、type、所在地，如：59.173.12.231：80 http 湖北武汉 电信 的ip就是59.173.12.231 端口80 代理类型http 。然后就可以配置自己的浏览器了：IE选择工具-internet选项-连接-局域网设置，在为LAN使用代理服务器前打勾，然后将代理服务器的地址，端 口填好，确定就可以了。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Firefox的设置与IE类似不过要选择不过要选择use this proxy sever for all protocols(我现在用的英文版，大概意思是所有的协议都使用该代理服务器）。&lt;/p&gt;
+
+&lt;p&gt;不过代理服务器会不稳定，可以用的服务器可能过一段时间就不能用了，这是就只能再去找新的代理了。&lt;/p&gt;
+
+&lt;p&gt;在补充点的就是在北方的同学最好选择网通的代理，南方的选电信的速度快些。&lt;/p&gt;
+
+&lt;p&gt;4.使用搜狗浏览器 ，这是搜狗最近推出的浏览器，内置教育网加速功能。访问国外网站速度很快，如果嫌麻烦使用它还是比较方便的，不过就是相当容易假死，在学校的电脑上卡住很容易的。&lt;/p&gt;
+
+&lt;p&gt;可以到搜狗浏览器官网 http://ie.sogou.com/ 下载或者这里有个绿色版，我试过了的安全无毒，下载后解压就可以了，点击下载免安装版本 。不过我并不喜欢搜狗浏览器，只是在教育网这个庞大的局域网内实在是没办法才用。如果哪天Firefox 也有这项功能了，那该多好。我曾试着找到搜狗浏览器的代理服务器，然后使用它来配置火狐，刚开始是可以的，但现在不能了，只看到try sougou explorer 几个字。毕竟搜狗推出浏览器，代理服务器是不会让其他浏览器白用的，也许试着更改浏览器识别可以欺骗过去，但是我的技术有限了，也没必要花那么多心思去上 网了，实在不行就到网吧去吧&lt;/p&gt;</content>
  </entry>
  
  

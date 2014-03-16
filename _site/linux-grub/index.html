@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>使用dnsmasq加速dns解析</title>
+    <title>Windows下删除Linux后重装系统</title>
     <meta name="description" content="">
     <meta name="author" content="Ernest Du">
 
@@ -106,52 +106,32 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>使用dnsmasq加速dns解析 </h1>
+  <h1>Windows下删除Linux后重装系统 </h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>16 August 2011</span>
+      <span>30 January 2009</span>
     </div>
     <div class="content">
-      <p>Dnsmasq是一个轻量的dns缓存和dhcp服务器。我们可以使用dnsmasq通过缓存加速来dns解析，另外使用dnsmasq还可以实现一些更有趣的功能。</p>
+      <p>昨天晚上忙了一天给电脑重装系统。</p>
 
-<h2 id="1dnsmasq">1.安装dnsmasq</h2>
+<p>本来以前安装了Linux，系统是靠Grub引导启动的，重新安装XP后，我就直接删掉Linux分区，然后格式化硬盘，打算以后装Ubuntu和XP的双系统。结果没想到就出问题了，电脑重启后，Grub启动，然后就提示Grub Error 17，无法启动xp了。</p>
 
-<p>大多数linux发行版都能够很容易地安装dnsmasq。如Gentoo中：<code>emerge dnsmasq</code>即可。</p>
+<p>没有办法，用手机上网查，大概明白了，Linux虽然被直接删掉了，可是Grub并没有，而Grub又仍然按照以前的配置来启动，结果无法识别现在的新分区，所以无法启动了。</p>
 
-<h2 id="2dnsmasq">2.配置dnsmasq</h2>
+<p>这个又该怎样解决呢？大概有三种：1.在dos下修复MBR主引导记录，具体命令可以查到。我是不懂DOS这样的老古董了（尽管小学学过）。而且我并没有DOS启动盘，所以这个办法只有Pass。</p>
 
-<p>dnsmasq的配置文件为/etc/dnsmasq.conf，最简单的配置如下：</p>
-<div class='highlight'><pre><code class='bash'>listen-address<span class='o'>=</span>127.0.0.1
+<p>2.使用XP的安装光盘，来修复。必须是安装盘，Ghost系统不行。Faint,我刚买的深度Ghost XP又没有用（还是正版好啊！精神上支持一下）。</p>
 
-cache-size<span class='o'>=</span>150
-</code></pre></div>
-<p>这样的配置后，再编辑/etc/resolv.conf加上nameserver 127.0.0.1就可以使用127.0.0.1即本地的dnsmasq作为dns服务器了。dnsmasq默认会使用/etc/resolv.conf中的nameserver来作为自己的上游dns服务器。你也可以自己指定dns服务器，如： resolv-file=/etc/dnsmasq_resolver</p>
+<p>3.使用Linux安装盘修复Grub，我试了一下，小心翼翼地敲入命令以后，重启，仍然是Error 17。RP有问题吗？郁闷，可能是Linux分区已经不存在了，Grub修复也不起作用。</p>
 
-<p>这样dnsmasq就使用/etc/dnsmasq_resolver文件中的dns服务器，这个文件可以任意指定，格式和/etc/resolv.conf的一样。像我的就是： nameserver 211.68.71.5 nameserver 211.68.71.4 nameserver 8.8.8.8</p>
+<p>最后只好自己想办法，反正电脑里没重要的东西，不怕。经过多次尝试，发现Linux系统自带了一个卸载系统的选项，也许先重装一遍Linux，再在Linux里卸载（不是直接删除）Linux。</p>
 
-<h2 id="3dns">3.为特定的域名指定dns服务器</h2>
+<p>删完Linux后电脑是无法启动的，Grub也没有了，看样子是把Grub卸载了，于是我再将XP的光盘放进去，重装XP。这次应该没问题了吧，我把电脑再次重启，结果还是不行，没有Grub,但是XP也进不去。再次把XP的光盘放进电脑，重启，打算重装一遍，结果电脑一下子就黑屏了，就像突然停电一样。难道多次重装系统，电脑坏了？按下Power，又启动了，这次先不装，用光盘里的工具检查了一下电脑，结果发现硬盘的分割表错误# 114，不懂，手机上网查，要用光盘里的分区工具修复，只好又开始重新分区。分完区后重装XP，取出光盘，再次启动，终于看到了启动画面，唉，不容易啊。而这个时候已经是晚上12点了（我是8点就开始了的啊）。</p>
 
-<p>这个功能很有用，像我在教育网可以使用ipv6，于是访问Google的服务通过ipv6更稳定和快速，所以可以使用能够解析出Google ipv6地址的dns服务器：</p>
-<div class='highlight'><pre><code class='bash'><span class='nv'>server</span><span class='o'>=</span>/google.com/2001:470:20::2 
-
-<span class='nv'>server</span><span class='o'>=</span>/appspot.com/2001:470:20::2 
-
-<span class='nv'>server</span><span class='o'>=</span>/blogspot.com/2001:470:20::2 
-
-<span class='nv'>server</span><span class='o'>=</span>/google.com.hk/2001:470:20::2 
-
-<span class='nv'>server</span><span class='o'>=</span>/youtube.com/2001:470:20::2
-</code></pre></div>
-<p>这样所有*.google.com的域名都使用2001:470:20::2这个dns服务器来解析，其他的域名类似。</p>
-
-<h2 id="4dnsmasqhosts">4.用dnsmasq代替hosts文件</h2>
-
-<p>这个比普通hosts文件方便的是普通的hosts不支持通配符，像*.phobos.apple.com 208.46.163.74是不可以的，在dnsmasq.conf里面则可以： address=/.phobos.apple.com/208.46.163.74</p>
-
-<p>另外要让dnsmasq每次开机起作用，Gentoo下<code>rc-update add dnsmasq default</code>，Arch下在/etc/rc.conf的DAEMONS列表添加dnsmasq就可以了。如果你每次dhcp都会重写/etc/resolv.conf文件，dhcpcd的话可以创建个/etc/resolv.conf.head文件，添加一行<code>nameserver 127.0.0.1</code>，dhclient的话可以添加或编辑 /etc/dhclient.conf 文件添加<code>prepend domain-name-servers 127.0.0.1;</code></p>
+<p>这次可以算是我最为曲折一次的重装系统了，一切都不是想象的那样简单，当然也不是没有办法。还有就是一定不要在Windows下直接删除Linux分区了，那样很麻烦，一定要使用Linux自带的卸载程序。</p>
     </div>
 
   
@@ -182,11 +162,11 @@ cache-size<span class='o'>=</span>150
 
   
      
-    	<li><a href="/tags.html#dnsmasq-ref">dnsmasq <span>1</span></a></li>
-     
     	<li><a href="/tags.html#linux-ref">linux <span>9</span></a></li>
      
-    	<li><a href="/tags.html#network-ref">network <span>9</span></a></li>
+    	<li><a href="/tags.html#grub-ref">grub <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#windows-ref">windows <span>3</span></a></li>
     
   
 
@@ -199,10 +179,10 @@ cache-size<span class='o'>=</span>150
     <div class="pagination">
       <ul>
       
-        <li class="prev"><a href="/he-tunnelbroker" title="HE Tunnelbroker Server的选择">&larr; Previous</a></li>
+        <li class="prev"><a href="/illegal-software" title="盗版软件">&larr; Previous</a></li>
       
       
-        <li class="next"><a href="/google-public-dns" title="Google Public DNS IPv6 addresses">Next &rarr;</a></li>
+        <li class="next"><a href="/ubuntu-revese-proxy" title="ubuntu ppa反向代理">Next &rarr;</a></li>
       
       </ul>
     </div>

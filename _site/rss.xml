@@ -3,18 +3,18 @@
 <channel>
         <title>Ernest's Blog</title>
         <description>Ernest's Blog - Ernest Du</description>
-        <link>http://username.github.io</link>
-        <link>http://username.github.io</link>
-        <lastBuildDate>2014-03-13T22:52:36+08:00</lastBuildDate>
-        <pubDate>2014-03-13T22:52:36+08:00</pubDate>
+        <link>http://ErnestDu.github.io</link>
+        <link>http://ErnestDu.github.io</link>
+        <lastBuildDate>2014-03-16T22:45:07+08:00</lastBuildDate>
+        <pubDate>2014-03-16T22:45:07+08:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
                 <title>测试</title>
                 <description>&lt;p&gt;这是一个测试页面。&lt;/p&gt;</description>
-                <link>http://username.github.io/test-page</link>
-                <guid>http://username.github.io/test-page</guid>
+                <link>http://ErnestDu.github.io/test-page</link>
+                <guid>http://ErnestDu.github.io/test-page</guid>
                 <pubDate>2014-03-09T22:03:48Z</pubDate>
         </item>
 
@@ -30,8 +30,8 @@
 &lt;span class=&#39;c1&#39;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;</description>
-                <link>http://username.github.io/welcome-to-jekyll</link>
-                <guid>http://username.github.io/welcome-to-jekyll</guid>
+                <link>http://ErnestDu.github.io/welcome-to-jekyll</link>
+                <guid>http://ErnestDu.github.io/welcome-to-jekyll</guid>
                 <pubDate>2014-03-08T22:03:48Z</pubDate>
         </item>
 
@@ -73,8 +73,8 @@
 &lt;h3 id=&quot;_2&quot;&gt;客户端&lt;/h3&gt;
 
 &lt;p&gt;客户端的软件也比较多，比如Ekiga、linphone这些都是开源的SIP客户端，在Windows和Linux下面都能使用。使用都比较简单，不多说了。我们在Android手机上也可以打开SIP电话的功能，打开拨号——设置——互联网通话设置——账户——添加账户，然后就可以添加SIP的账户，保存以后记得勾选接听来电，这样才能接听别人的呼叫。&lt;/p&gt;</description>
-                <link>http://username.github.io/sip-setup</link>
-                <guid>http://username.github.io/sip-setup</guid>
+                <link>http://ErnestDu.github.io/sip-setup</link>
+                <guid>http://ErnestDu.github.io/sip-setup</guid>
                 <pubDate>2013-03-24T00:00:00+08:00</pubDate>
         </item>
 
@@ -91,8 +91,8 @@
 &lt;p&gt;这时差不多都快开始了，但是我们在哪里起跑呢，全程在很远的地方，我们只能混在迷你马拉松的队伍里了。到处都是人，根本跑不开，只能缓缓前进，真正走到全程的起跑点时已经晚了6分钟了。不过马拉松也就无所谓起跑了。跑过天安门差不多开始真正跑起来，因为没有热身，所以开始跑得很慢，跑过西单，然后复兴门，接着转弯，迷你马拉松的同学们就跑完了。我们继续往前面跑，之前很冷的感觉没有了，速度也还比较稳定，不快不慢，这样下去肯定是没问题的。跑了10多公里后，感觉很饿，就想喝加得乐，吃东西，不过要每隔5公里才有啊，只能继续跑。后面开始有风了，而且速度变慢以后身体又开始感觉冷了，越来越不想跑，而且空气也不好，同学也跑不动了。而且比较失误的是我们基本是匀速跑，虽然总的时间我们估计能跑完，但是在半程的关门时间却不是3小时，而是要提前一点，跑在后面都没有水和饮料了，而且道路也解除封闭了，我们还要在路上等红绿灯。越想越觉得跑下去没意思了，于是干脆不跑了吧，就直接跑完半程就坐地铁去奥体中心了。&lt;/p&gt;
 
 &lt;p&gt;不过今年能跑一半我觉得还是基本满足了，还是下一年继续吧，如果天气能好点，争取再跑完一次全程。&lt;/p&gt;</description>
-                <link>http://username.github.io/beijing-marathon-2012</link>
-                <guid>http://username.github.io/beijing-marathon-2012</guid>
+                <link>http://ErnestDu.github.io/beijing-marathon-2012</link>
+                <guid>http://ErnestDu.github.io/beijing-marathon-2012</guid>
                 <pubDate>2012-11-30T00:00:00+08:00</pubDate>
         </item>
 
@@ -117,8 +117,8 @@
 &lt;p&gt;关于安全问题，用户名密码是本地明文保存的，登录时密码md5加密后截取了一部分POST到服务器，如果要觉得不要安全请慎用。&lt;/p&gt;
 
 &lt;p&gt;话说自从开始认证以后获取的ip都是10开头的了，以前的ip全都没有用了。&lt;/p&gt;</description>
-                <link>http://username.github.io/bupt-gateway-auto-login</link>
-                <guid>http://username.github.io/bupt-gateway-auto-login</guid>
+                <link>http://ErnestDu.github.io/bupt-gateway-auto-login</link>
+                <guid>http://ErnestDu.github.io/bupt-gateway-auto-login</guid>
                 <pubDate>2012-03-05T00:00:00+08:00</pubDate>
         </item>
 
@@ -127,8 +127,8 @@
                 <description>&lt;p&gt;今天终于考完了，感觉一般吧，数学比预计差些，专业课差很多，英语政治貌似要好点，总体来说自己的水平就这样，发挥也还算正常，不要求更高的表现了。其他无所谓了，考挂了又不用补考，怕毛啊。&lt;/p&gt;
 
 &lt;p&gt;至少最近终于可以稍微放松点了，考完期末考试就能够回家了&lt;/p&gt;</description>
-                <link>http://username.github.io/exam</link>
-                <guid>http://username.github.io/exam</guid>
+                <link>http://ErnestDu.github.io/exam</link>
+                <guid>http://ErnestDu.github.io/exam</guid>
                 <pubDate>2012-01-09T00:00:00+08:00</pubDate>
         </item>
 
@@ -141,8 +141,8 @@
 &lt;p&gt;所以我们就照着这个以后运行&lt;code&gt;wine sogouexplorer.exe -proxy at1.dll EDUANDVIDEO D5AA5E6CC265B9CC187E7523AAE5847E&lt;/code&gt; 就可以了。后面的一串字符不这样也可以，但是就照着来吧，注意下sogouexplorer.exe和at1.dll的路径，默认在~/.wine /drive_c/Program\ Files/SogouExplorer 里面，浏览器设置http 127.0.0.1:8081的代理。如果不能启用加速功能，请检查dns设置，要使用教育网的dns才可以。&lt;/p&gt;
 
 &lt;p&gt;另外网上找到的一个用Python写的程序，额，很强大： &lt;a href=&quot;http://xiaoxia.org/2011/03/26/using-python-to-write-a-local-sogou-proxy-server-procedures/&quot;&gt;http://xiaoxia.org/2011/03/26/using-python-to-write-a-local-sogou-proxy-server-procedures/&lt;/a&gt; 这里默认的代理是http 127.0.0.1:1998 ，python的话windows, linux, mac各种平台都能用了。&lt;/p&gt;</description>
-                <link>http://username.github.io/sogou-proxy</link>
-                <guid>http://username.github.io/sogou-proxy</guid>
+                <link>http://ErnestDu.github.io/sogou-proxy</link>
+                <guid>http://ErnestDu.github.io/sogou-proxy</guid>
                 <pubDate>2011-11-03T00:00:00+08:00</pubDate>
         </item>
 
@@ -161,8 +161,8 @@
 &lt;p&gt;现在最大的感觉就是小腿痛，不知道明天还能不能走路。。总的来说感觉还是很有意义的，特别感谢在场边热情的市民和志愿者，你们一直在给我们加油；感想提供食物的北航、清华、中科大的同学，不然我估计在半路就饿得昏过去了；感谢Nas、孙燕姿和Dr. Dre，你们的歌陪伴了漫长的六小时；感谢一起参赛的 @goophile @wxd08 @kwj007 飞哥和强哥，我们一起完成一次体能极限的考验。&lt;/p&gt;
 
 &lt;p&gt;我觉得该去好好休息了。。&lt;/p&gt;</description>
-                <link>http://username.github.io/beijing-marathon-2013</link>
-                <guid>http://username.github.io/beijing-marathon-2013</guid>
+                <link>http://ErnestDu.github.io/beijing-marathon-2013</link>
+                <guid>http://ErnestDu.github.io/beijing-marathon-2013</guid>
                 <pubDate>2011-10-16T00:00:00+08:00</pubDate>
         </item>
 
@@ -171,8 +171,8 @@
                 <description>&lt;p&gt;之前的BurstNET ipv6总是连不上，于是只好换了。最后在Rapidxen和PhotonVPS中选择了PhotonVPS 。PhotonVPS 貌似口碑不错，我选择的是Warp .25方案：内存128M，流量300G，一个ipv4 ip，10个ipv6 ip，月费是 $ 5.95 USD，我选了按季度付费，$ 16.07 USD，比BurstNET的价格还便宜一点。&lt;/p&gt;
 
 &lt;p&gt;这个配置没有以前的VPS高，于是另外又买了东哥 @cosbeta 的homezz虚拟主机来放blog。现在用VPS来做blog及其图床的ipv6反向代理，方便教育网用户访问。以前VPS上的Ubuntu PPA ipv6反向代理就只有关闭了，同学们自己另找代理吧。&lt;/p&gt;</description>
-                <link>http://username.github.io/photon-vps</link>
-                <guid>http://username.github.io/photon-vps</guid>
+                <link>http://ErnestDu.github.io/photon-vps</link>
+                <guid>http://ErnestDu.github.io/photon-vps</guid>
                 <pubDate>2011-10-09T00:00:00+08:00</pubDate>
         </item>
 
@@ -205,8 +205,8 @@ server
 &lt;span class=&#39;o&#39;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;在chrome里面使用Page load time这个插件可以查看页面载入时间。nginx开启缓存前后页面载入速度对比：未开启 First response 716ms, Response end 402ms，开启后 First response 204ms，Response end 401ms，嗯，加速还是比较明显的。&lt;/p&gt;</description>
-                <link>http://username.github.io/nginx-reverse-proxy-cache</link>
-                <guid>http://username.github.io/nginx-reverse-proxy-cache</guid>
+                <link>http://ErnestDu.github.io/nginx-reverse-proxy-cache</link>
+                <guid>http://ErnestDu.github.io/nginx-reverse-proxy-cache</guid>
                 <pubDate>2011-10-09T00:00:00+08:00</pubDate>
         </item>
 
@@ -222,8 +222,8 @@ server
 &lt;p&gt;这ip还算好记，不过暂时不会像ordns.he.net(2001:470:20::2)那样返回Google相关域名的ipv6地址。&lt;/p&gt;
 
 &lt;p&gt;另外今天才知道为什么在不同的地点ping 8.8.8.8, 2001:470:20::2或者2001:4860:4860::8888这些ip都很快的原因，因为它们使用了anycast任播技术，实际的服务器是分布在很多不同地理位置的，比如全球13个根域名服务器”a~m.root-servers.net”，其中部分并不只有单一个服务器，是以任播技术在全球多个地点设立镜像站。好嘛，我觉得需要去补计算机网络知识了。&lt;/p&gt;</description>
-                <link>http://username.github.io/google-public-dns</link>
-                <guid>http://username.github.io/google-public-dns</guid>
+                <link>http://ErnestDu.github.io/google-public-dns</link>
+                <guid>http://ErnestDu.github.io/google-public-dns</guid>
                 <pubDate>2011-10-09T00:00:00+08:00</pubDate>
         </item>
 
@@ -266,8 +266,8 @@ cache-size&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;150
 &lt;p&gt;这个比普通hosts文件方便的是普通的hosts不支持通配符，像*.phobos.apple.com 208.46.163.74是不可以的，在dnsmasq.conf里面则可以： address=/.phobos.apple.com/208.46.163.74&lt;/p&gt;
 
 &lt;p&gt;另外要让dnsmasq每次开机起作用，Gentoo下&lt;code&gt;rc-update add dnsmasq default&lt;/code&gt;，Arch下在/etc/rc.conf的DAEMONS列表添加dnsmasq就可以了。如果你每次dhcp都会重写/etc/resolv.conf文件，dhcpcd的话可以创建个/etc/resolv.conf.head文件，添加一行&lt;code&gt;nameserver 127.0.0.1&lt;/code&gt;，dhclient的话可以添加或编辑 /etc/dhclient.conf 文件添加&lt;code&gt;prepend domain-name-servers 127.0.0.1;&lt;/code&gt;&lt;/p&gt;</description>
-                <link>http://username.github.io/dnsmasq</link>
-                <guid>http://username.github.io/dnsmasq</guid>
+                <link>http://ErnestDu.github.io/dnsmasq</link>
+                <guid>http://ErnestDu.github.io/dnsmasq</guid>
                 <pubDate>2011-08-16T00:00:00+08:00</pubDate>
         </item>
 
@@ -343,8 +343,8 @@ rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 525.444/542.23
 &lt;p&gt;&lt;a href=&quot;http://tech.littlecho.tw/entry/IPv6-Tunnel-Brokers-in-Taiwan-and-IPv6-connectivity-test&quot;&gt;http://tech.littlecho.tw/entry/IPv6-Tunnel-Brokers-in-Taiwan-and-IPv6-connectivity-test&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;有空再测试一下速度。&lt;/p&gt;</description>
-                <link>http://username.github.io/he-tunnelbroker</link>
-                <guid>http://username.github.io/he-tunnelbroker</guid>
+                <link>http://ErnestDu.github.io/he-tunnelbroker</link>
+                <guid>http://ErnestDu.github.io/he-tunnelbroker</guid>
                 <pubDate>2011-07-23T00:00:00+08:00</pubDate>
         </item>
 
@@ -381,8 +381,8 @@ rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 525.444/542.23
 &lt;p&gt;在thunar的preference里面enable volume management，把mount removable drives when hot-plugged勾上。&lt;/p&gt;
 
 &lt;p&gt;之前在Gnome 3下面设置的快捷键还能用，所以配置简单多了。以前也用过Openbox，设置壁纸要装feh，这次也不用，都是Gnome 3的设置，就不管了。大概就这些了。&lt;/p&gt;</description>
-                <link>http://username.github.io/openbox-configuration</link>
-                <guid>http://username.github.io/openbox-configuration</guid>
+                <link>http://ErnestDu.github.io/openbox-configuration</link>
+                <guid>http://ErnestDu.github.io/openbox-configuration</guid>
                 <pubDate>2011-07-12T00:00:00+08:00</pubDate>
         </item>
 
@@ -411,8 +411,8 @@ rtt min/avg/max/mdev &lt;span class=&#39;o&#39;&gt;=&lt;/span&gt; 525.444/542.23
 &lt;p&gt;这次安装第一感觉是Windows 8的UI变化不大，基本和Windows 7和Windows Server 2008 R2是一样的，毕竟现在是早期开发阶段。除了外观的变化外，内核的变化我也就搞不懂了，反正估计变化也不大，或者微软会说一大堆的改进和新功能，但是其实对于桌面用户来说应该还是没有什么特别的。&lt;/p&gt;
 
 &lt;p&gt;本来还打算虚拟机装完后在电脑上直接装的，但是看到这个系统的界面变化不大，还是有点失望了（我本来就是去看UI变化的，抱歉，只有这么肤浅的追求……）。以前Windows 7刚beta的时候也是第一时刻就装了，当时还是很喜欢Windows 7的，遇到同学就推广Windows 7。不过后来就厌倦了，最烦的就是帮别人装系统，特别是Windows 7，本来这个没什么技术含量了。尤其要是个和计算机相关专业的男生还找你装系统的，你就真的只有无语了。看来自己现在对Windows真是没有什么兴趣了，好吧，没什么期待也好，继续专心的用Linux好了。&lt;/p&gt;</description>
-                <link>http://username.github.io/windows8</link>
-                <guid>http://username.github.io/windows8</guid>
+                <link>http://ErnestDu.github.io/windows8</link>
+                <guid>http://ErnestDu.github.io/windows8</guid>
                 <pubDate>2011-06-04T00:00:00+08:00</pubDate>
         </item>
 
@@ -452,8 +452,8 @@ expect eof
 &lt;p&gt;其中username, hostname, yourpassword改成对应的用户名、主机名和密码，执行这个脚本就可以登录了，比较适合用ssh代理的情况。&lt;/p&gt;
 
 &lt;p&gt;以上两种方法相对于自己手动输入密码还是有点不安全的，第一种要是有人能够使用你的电脑就可以登录你的远程主机，第二种方法更是直接可以在脚本里面看到你的password了，所以要安全的话就还是不要怕麻烦再输入一遍密码好了。&lt;/p&gt;</description>
-                <link>http://username.github.io/ssh-without-password</link>
-                <guid>http://username.github.io/ssh-without-password</guid>
+                <link>http://ErnestDu.github.io/ssh-without-password</link>
+                <guid>http://ErnestDu.github.io/ssh-without-password</guid>
                 <pubDate>2011-05-26T00:00:00+08:00</pubDate>
         </item>
 
@@ -474,8 +474,8 @@ expect eof
 &lt;p&gt;默认主题也一般，而且没有找到可以改主题的地方，可以安装gnome-tweak-tool来简单调整，另外可以直接替换/usr/share/gnome-shell/theme里面的文件，wowubuntu这里有3个Gnome Shell的主题，感兴趣的同学可以去看看。&lt;/p&gt;
 
 &lt;p&gt;总的来说Gnome 3作为一个Gnome有里程碑意义的更新还是很不错的，值得大家去尝试。&lt;/p&gt;</description>
-                <link>http://username.github.io/gnome3</link>
-                <guid>http://username.github.io/gnome3</guid>
+                <link>http://ErnestDu.github.io/gnome3</link>
+                <guid>http://ErnestDu.github.io/gnome3</guid>
                 <pubDate>2011-05-01T00:00:00+08:00</pubDate>
         </item>
 
@@ -486,8 +486,8 @@ expect eof
 &lt;p&gt;于是我想着能不能先把迅雷离线服务器上的东西下载到vps上，然后在从vps下载到自己电脑上。试了下还是可以实现的，关键是要把浏览器的cookie导出来，然后wget或aria2使用这个cookie来连接服务器就可以登录了。&lt;/p&gt;
 
 &lt;p&gt;Firefox的cookie可以用Export Cookies导出（Chrome暂时没有找到什么方法导出cookie），然后将cookies.txt上传到vps; 迅雷离线服务器下载好了以后，选择资源复制下载链接; 然后&lt;code&gt;wget –load-cookies=cookiefile &amp;#39;url&amp;#39; -o outputfilename&lt;/code&gt; 就可以了。如果觉得wget不够快，可以换用aria2多线程下载，加上参数-s，&lt;code&gt;aria2c –load-cookies=cookiefile -s 5 &amp;#39;url&amp;#39; -o outputfilename&lt;/code&gt;，就是将文件分成5份来下载。等到vps下载好了之后就可以用sftp，ftp，http等方法把文件下载到自己的电脑了。&lt;/p&gt;</description>
-                <link>http://username.github.io/commandline-xunlei-offline</link>
-                <guid>http://username.github.io/commandline-xunlei-offline</guid>
+                <link>http://ErnestDu.github.io/commandline-xunlei-offline</link>
+                <guid>http://ErnestDu.github.io/commandline-xunlei-offline</guid>
                 <pubDate>2011-04-19T00:00:00+08:00</pubDate>
         </item>
 
@@ -497,7 +497,7 @@ expect eof
 
 &lt;p&gt;自己试了下速度很快，截图&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/ubuntu.png&quot; alt=&quot;ubuntu&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ErnestDu.github.io/assets/images/ubuntu.png&quot; alt=&quot;ubuntu&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这是平均速度&lt;/p&gt;
 
@@ -509,9 +509,85 @@ expect eof
 2607:f878:3:2:0:300:2213:10 launchpad.net
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;暂时只有ipv6可以连接，希望大家能够反馈使用效果。&lt;/p&gt;</description>
-                <link>http://username.github.io/ubuntu-revese-proxy</link>
-                <guid>http://username.github.io/ubuntu-revese-proxy</guid>
+                <link>http://ErnestDu.github.io/ubuntu-revese-proxy</link>
+                <guid>http://ErnestDu.github.io/ubuntu-revese-proxy</guid>
                 <pubDate>2011-03-03T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Windows下删除Linux后重装系统</title>
+                <description>&lt;p&gt;昨天晚上忙了一天给电脑重装系统。&lt;/p&gt;
+
+&lt;p&gt;本来以前安装了Linux，系统是靠Grub引导启动的，重新安装XP后，我就直接删掉Linux分区，然后格式化硬盘，打算以后装Ubuntu和XP的双系统。结果没想到就出问题了，电脑重启后，Grub启动，然后就提示Grub Error 17，无法启动xp了。&lt;/p&gt;
+
+&lt;p&gt;没有办法，用手机上网查，大概明白了，Linux虽然被直接删掉了，可是Grub并没有，而Grub又仍然按照以前的配置来启动，结果无法识别现在的新分区，所以无法启动了。&lt;/p&gt;
+
+&lt;p&gt;这个又该怎样解决呢？大概有三种：1.在dos下修复MBR主引导记录，具体命令可以查到。我是不懂DOS这样的老古董了（尽管小学学过）。而且我并没有DOS启动盘，所以这个办法只有Pass。&lt;/p&gt;
+
+&lt;p&gt;2.使用XP的安装光盘，来修复。必须是安装盘，Ghost系统不行。Faint,我刚买的深度Ghost XP又没有用（还是正版好啊！精神上支持一下）。&lt;/p&gt;
+
+&lt;p&gt;3.使用Linux安装盘修复Grub，我试了一下，小心翼翼地敲入命令以后，重启，仍然是Error 17。RP有问题吗？郁闷，可能是Linux分区已经不存在了，Grub修复也不起作用。&lt;/p&gt;
+
+&lt;p&gt;最后只好自己想办法，反正电脑里没重要的东西，不怕。经过多次尝试，发现Linux系统自带了一个卸载系统的选项，也许先重装一遍Linux，再在Linux里卸载（不是直接删除）Linux。&lt;/p&gt;
+
+&lt;p&gt;删完Linux后电脑是无法启动的，Grub也没有了，看样子是把Grub卸载了，于是我再将XP的光盘放进去，重装XP。这次应该没问题了吧，我把电脑再次重启，结果还是不行，没有Grub,但是XP也进不去。再次把XP的光盘放进电脑，重启，打算重装一遍，结果电脑一下子就黑屏了，就像突然停电一样。难道多次重装系统，电脑坏了？按下Power，又启动了，这次先不装，用光盘里的工具检查了一下电脑，结果发现硬盘的分割表错误# 114，不懂，手机上网查，要用光盘里的分区工具修复，只好又开始重新分区。分完区后重装XP，取出光盘，再次启动，终于看到了启动画面，唉，不容易啊。而这个时候已经是晚上12点了（我是8点就开始了的啊）。&lt;/p&gt;
+
+&lt;p&gt;这次可以算是我最为曲折一次的重装系统了，一切都不是想象的那样简单，当然也不是没有办法。还有就是一定不要在Windows下直接删除Linux分区了，那样很麻烦，一定要使用Linux自带的卸载程序。&lt;/p&gt;</description>
+                <link>http://ErnestDu.github.io/linux-grub</link>
+                <guid>http://ErnestDu.github.io/linux-grub</guid>
+                <pubDate>2009-01-30T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>盗版软件</title>
+                <description>&lt;p&gt;这两天在网上下了不少软件，因为自己想学点图像处理、网页设计等，就下了Adobe Photoshop、Flash、Dreamweaver等。下载的都是免费的绿色免安装版本，下的时候顺便的官方网站上看看了看，一看就吓了一跳，好贵啊！Photoshop CS 4 官方价格是699美元，Flash CS 4 也699美元，Fireworks CS 4 便宜点也要299美元……其他的软件也大概这样。像Adobe Creative Suite 包含了多个软件的合集更是要价1399美元。&lt;/p&gt;
+
+&lt;p&gt;反过来，在中国好像所有的软件都可以用到不用钱的，破解高手早就为我们提供了免费的软件。不仅如此，还可以看到免安装的，绿色的，优化的各种改造过的版本。的确下个免安装的放在u盘里，很方便，从这点来说，盗版做得比正版还好。不过知识产权的问题就没有保护好了，我们也许使用了盗版并不觉得有什么不好，但是不管怎么说总是不好的。这一点我就不好说了，用盗版毕竟不光彩，自己知道就行了。&lt;/p&gt;
+
+&lt;p&gt;但是有的软件，我们可以找到其他的免费软件替代，而且这些合法的免费软件功能不见得比正版差，比如Microsoft Offic 就可以用WPS 来替代，WPS现在面向个人用户推出了免费版，全面兼容Office，功能强大，而且更重要的是这是我们中国人自己的办公软件。还有杀毒软件也有许多的免费了，如360 ，瑞星Google专版 等。压缩解压常用的winrar，也可以用7-Zip 来代替。&lt;/p&gt;</description>
+                <link>http://ErnestDu.github.io/illegal-software</link>
+                <guid>http://ErnestDu.github.io/illegal-software</guid>
+                <pubDate>2009-01-22T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Windows7 安装成功了！</title>
+                <description>&lt;p&gt;Windows 7 是微软下一代操作系统预计今年下半年发布，现在可以下载到它的测试版（bt种子下载 ）。下载后的iso镜像文件有2.43G，然后就可以安装了。&lt;/p&gt;
+
+&lt;p&gt;安装有几种方法：1、将镜像文件刻成光盘，放入光盘重启电脑，按照提示一步一步就可以安装了。&lt;/p&gt;
+
+&lt;p&gt;2、在虚拟机里安装。虚拟机软件很多，如virtual pc、vmware、virtualbox等，具体使用方法自己可以上Google查一查。其实这种方法并不是真的安装了Windows 7。不过可以先在虚拟机里试用一下。&lt;/p&gt;
+
+&lt;p&gt;3、从硬盘安装。我的电脑没有刻录光驱，所以采用的是这种方法。下面具体介绍一下：安装环境Windows xp sp 2，另外需要winmount ，一个空的盘，建议不要安装在C盘，毕竟这只是测试版，以前的系统要留着。大小15G左右，NTFS文件系统。winmount安装完后，将 Windows7镜像文件winmount成一个虚拟盘，点击它，安装就开始了,中间电脑会重启几次。最后完成安装，就启动Windows 7 了。然后简单配置一下就可以上网了，大部分xp下的软件也都能用。至于其他的就暂时不知道了，我也刚开始使用，慢慢体会吧。&lt;/p&gt;</description>
+                <link>http://ErnestDu.github.io/install-windows7</link>
+                <guid>http://ErnestDu.github.io/install-windows7</guid>
+                <pubDate>2009-01-21T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>如何在教育网访问国外网站1</title>
+                <description>&lt;p&gt;我们大学校园里的网络是使用的中国教育和科研计算机网 ，简称教育网，是国家骨干网之一。不过教育网用户一般是不能直接访问国外的网站的。其实以前是可以的，不过涉及了些利益问题，现在不行了（这个暂且不讨 论）。日常应用中经常遇到需要访问国外网站的情况，因此了解一下教育网访问国外网站的方法还是会很有帮助的。其实基本的原理是一样的，就是要找到代理服务器，这就相当于是一个中转站，让它帮我们访问然后将内容发送过来。下面是具体的方法：&lt;/p&gt;
+
+&lt;p&gt;1.使用付费的代理，如教育网直通车 ，因为需要钱，我没有使用过。应该速度是有保证的，Money多同学可以试试。&lt;/p&gt;
+
+&lt;p&gt;2.使用免费的在线代理，这种方法比较简单，不过不支持cookies，https加密连接也不行，只适合一般的网页浏览。具体的在线代理站可以自己上Google 搜。还有更简单办法，直接在要访问的网址后加 .edu.cn 这个方法我试过，速度还不错。如访问www.youtube.com 就在浏览器地址栏输入www.youtube.com.edu.cn 就可以了。不过今天在家里再试就不行了，因为我家的是电信线路。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;普通代理，这是最原始的办法，比较繁琐，不过个人认为是最好的办法。首先要找到代理服务器。这个就求助于搜索引擎了，搜索教育网代理就可以了。找到后的代 理包括了一下信息：ip地址、端口port、type、所在地，如：59.173.12.231：80 http 湖北武汉 电信 的ip就是59.173.12.231 端口80 代理类型http 。然后就可以配置自己的浏览器了：IE选择工具-internet选项-连接-局域网设置，在为LAN使用代理服务器前打勾，然后将代理服务器的地址，端 口填好，确定就可以了。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Firefox的设置与IE类似不过要选择不过要选择use this proxy sever for all protocols(我现在用的英文版，大概意思是所有的协议都使用该代理服务器）。&lt;/p&gt;
+
+&lt;p&gt;不过代理服务器会不稳定，可以用的服务器可能过一段时间就不能用了，这是就只能再去找新的代理了。&lt;/p&gt;
+
+&lt;p&gt;在补充点的就是在北方的同学最好选择网通的代理，南方的选电信的速度快些。&lt;/p&gt;
+
+&lt;p&gt;4.使用搜狗浏览器 ，这是搜狗最近推出的浏览器，内置教育网加速功能。访问国外网站速度很快，如果嫌麻烦使用它还是比较方便的，不过就是相当容易假死，在学校的电脑上卡住很容易的。&lt;/p&gt;
+
+&lt;p&gt;可以到搜狗浏览器官网 http://ie.sogou.com/ 下载或者这里有个绿色版，我试过了的安全无毒，下载后解压就可以了，点击下载免安装版本 。不过我并不喜欢搜狗浏览器，只是在教育网这个庞大的局域网内实在是没办法才用。如果哪天Firefox 也有这项功能了，那该多好。我曾试着找到搜狗浏览器的代理服务器，然后使用它来配置火狐，刚开始是可以的，但现在不能了，只看到try sougou explorer 几个字。毕竟搜狗推出浏览器，代理服务器是不会让其他浏览器白用的，也许试着更改浏览器识别可以欺骗过去，但是我的技术有限了，也没必要花那么多心思去上 网了，实在不行就到网吧去吧&lt;/p&gt;</description>
+                <link>http://ErnestDu.github.io/cernet1</link>
+                <guid>http://ErnestDu.github.io/cernet1</guid>
+                <pubDate>2009-01-21T00:00:00+08:00</pubDate>
         </item>
 
 
