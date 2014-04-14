@@ -5,10 +5,18 @@
         <description>Ernest's Blog - Ernest Du</description>
         <link>http://ErnestDu.github.io</link>
         <link>http://ErnestDu.github.io</link>
-        <lastBuildDate>2014-03-16T22:45:07+08:00</lastBuildDate>
-        <pubDate>2014-03-16T22:45:07+08:00</pubDate>
+        <lastBuildDate>2014-04-14T22:13:35+08:00</lastBuildDate>
+        <pubDate>2014-04-14T22:13:35+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>new post</title>
+                <description></description>
+                <link>http://ErnestDu.github.io/new-post</link>
+                <guid>http://ErnestDu.github.io/new-post</guid>
+                <pubDate>2014-03-17T00:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>测试</title>

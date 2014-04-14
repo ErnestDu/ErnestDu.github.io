@@ -8,6 +8,7 @@ http://ErnestDu.github.io/about.html
 http://ErnestDu.github.io/tags.html
 http://ErnestDu.github.io/rss.xml
 
+http://ErnestDu.github.io/new-post
 http://ErnestDu.github.io/test-page
 http://ErnestDu.github.io/welcome-to-jekyll
 http://ErnestDu.github.io/sip-setup

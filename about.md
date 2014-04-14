@@ -17,3 +17,23 @@ weight: 100
 性别男，爱好女。四川人。本科北邮通信工程，目前在读北邮计算机的研究生。
 
 喜欢技术的东西，爱折腾，喜欢学习新的东西。
+
+##相关链接
+你在这些地方也可以找到我：
+
+[GitHub][gh]
+
+[豆瓣][d]
+
+[Twitter][t]
+
+[Instagram][i]
+
+[Stack Overflow][s]
+
+...
+[gh]: https://github.com/ErnestDu
+[d]: http://www.douban.com/people/ilovemit/
+[t]: https://twitter.com/bupt
+[i]: http://instagram.com/ErnestDu
+[s]: http://stackoverflow.com/users/877859/ernest

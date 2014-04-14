@@ -4,13 +4,21 @@
  <title>Ernest's Blog</title>
  <link href="http://ErnestDu.github.io/" rel="self"/>
  <link href="http://ErnestDu.github.io"/>
- <updated>2014-03-16T22:45:07+08:00</updated>
+ <updated>2014-04-14T22:13:35+08:00</updated>
  <id>http://ErnestDu.github.io</id>
  <author>
    <name>Ernest Du</name>
    <email>hongqingdu@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>new post</title>
+   <link href="http://ErnestDu.github.io/new-post"/>
+   <updated>2014-03-17T00:00:00+08:00</updated>
+   <id>http://ErnestDu.github.io/new-post</id>
+   <content type="html"></content>
+ </entry>
  
  <entry>
    <title>测试</title>
